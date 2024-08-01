@@ -18,6 +18,7 @@ public class Playercontroller : Singleton<Playercontroller>
 
     private Animator myAnimator;
     private SpriteRenderer spriteRenderer;
+    private KnockBack knockBack;
     private float startingMoveSpeed;
     private bool facingLeft = false;
     private bool isDashing = false;
@@ -30,6 +31,7 @@ public class Playercontroller : Singleton<Playercontroller>
         myAnimator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         myTrailRenderer.emitting = false;
+        knockBack=GetComponent<KnockBack>();
     }
     private void Start()
     {
@@ -61,6 +63,7 @@ public class Playercontroller : Singleton<Playercontroller>
     }
     private void Move1()
     {
+        if (knockBack.GettingKnockedBack) { return; }
         rb.MovePosition(rb.position+movement*(moveSpeed*Time.fixedDeltaTime));
     }
     private void AdjustPlayerFacingDirection()
