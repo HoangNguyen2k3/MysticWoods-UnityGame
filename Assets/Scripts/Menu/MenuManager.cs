@@ -43,12 +43,10 @@ public class MenuManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            Debug.Log("UpArrow is pressed");
             SelectPreviousMenu();
             PlaySourceClick();
         } else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            Debug.Log("DownArrow is pressed");
             SelectNextMenu();
             PlaySourceClick();
         }
@@ -62,20 +60,16 @@ public class MenuManager : MonoBehaviour
                 SceneManager.LoadScene("LoadingScene");
             }else if(nameSelecting == "Menu-Setting")
             {
-                
-                ApplicationVariables.loadingSceneGame = "Setting";
-                Debug.Log("Choose scene setting");
+               ApplicationVariables.loadingSceneGame = "Setting";
+               
             }else if (nameSelecting == "Menu-Exit")
             {
-                
-                Debug.Log("Choose scene exit");
                 Application.Quit();
             }
         }
     }
     IEnumerator enterGame()
     {
-        Debug.Log("enterGame coroutine started");
         PlaySoundEnter();
         yield return new WaitForSeconds(1f);
         PlaySoundEnter();
@@ -86,7 +80,6 @@ public class MenuManager : MonoBehaviour
     }
     void PlaySoundEnter()
     {
-        Debug.Log("enterGame PlaySoundEnter started");
         audioSourceComponent.PlayOneShot(enter);
     }
 }

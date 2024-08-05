@@ -18534,6 +18534,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: UICanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3479449170220792218, guid: d39c9f28dbaaa9f4d81d649474dea644, type: 3}
+      propertyPath: m_Colors.m_NormalColor.b
+      value: 0.96531034
+      objectReference: {fileID: 0}
+    - target: {fileID: 3479449170220792218, guid: d39c9f28dbaaa9f4d81d649474dea644, type: 3}
+      propertyPath: m_Colors.m_NormalColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3479449170220792218, guid: d39c9f28dbaaa9f4d81d649474dea644, type: 3}
+      propertyPath: m_Colors.m_NormalColor.r
+      value: 0.3754716
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
