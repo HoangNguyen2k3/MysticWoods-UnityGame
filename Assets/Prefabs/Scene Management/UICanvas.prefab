@@ -457,6 +457,7 @@ GameObject:
   - component: {fileID: 8447835973019152241}
   - component: {fileID: 3568148196984456755}
   - component: {fileID: 5470052329900294327}
+  - component: {fileID: 5776977737944536750}
   m_Layer: 5
   m_Name: Home
   m_TagString: Untagged
@@ -566,9 +567,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9110421834248646765}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: Home
+      - m_Target: {fileID: 5776977737944536750}
+        m_TargetAssemblyTypeName: ManagerButton, Assembly-CSharp
+        m_MethodName: ExitToMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -578,6 +579,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5776977737944536750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123884436481083545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b01fecfb012d55540aeb2ebeeb62d766, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1312707354727034880
 GameObject:
   m_ObjectHideFlags: 0

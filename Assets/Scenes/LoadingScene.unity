@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loadingText: {fileID: 1497099007}
+  inventory: {fileID: 1950029128127216429, guid: d39c9f28dbaaa9f4d81d649474dea644, type: 3}
 --- !u!4 &441612443
 Transform:
   m_ObjectHideFlags: 0

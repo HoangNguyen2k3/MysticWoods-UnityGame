@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
 
 public class GrapeSlime : MonoBehaviour,IEnemy
@@ -28,7 +29,15 @@ public class GrapeSlime : MonoBehaviour,IEnemy
     }
     public void SpawnProjectileAnimEvent()
     {
-        Instantiate(grapeProjectilePrefab, transform.position, Quaternion.identity);
+        StartCoroutine(AttackMutipleProjectile());
+    }
+    private IEnumerator AttackMutipleProjectile()
+    {
+        for(int i = 1; i <= 3; i++)
+        {
+            Instantiate(grapeProjectilePrefab, transform.position, Quaternion.identity);
+            yield return new WaitForSeconds(0.5f);
+        }
     }
 
 }

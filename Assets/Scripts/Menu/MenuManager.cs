@@ -70,9 +70,9 @@ public class MenuManager : MonoBehaviour
     }
     IEnumerator enterGame()
     {
-        PlaySoundEnter();
-        yield return new WaitForSeconds(0.6f);
+        PlaySoundEnter();     
         ApplicationVariables.loadingSceneGame = "Scene1";
+        yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene("LoadingScene");
     }
    public void PlaySourceClick()
@@ -86,6 +86,7 @@ public class MenuManager : MonoBehaviour
     public void Click_Start_Game()
     {
         StartCoroutine(enterGame());
+        
         /*ApplicationVariables.loadingSceneGame = "Scene1";
         SceneManager.LoadScene("LoadingScene");*/
     }

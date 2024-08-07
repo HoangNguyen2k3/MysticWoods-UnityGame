@@ -21,8 +21,8 @@ public class ManagerButton : MonoBehaviour
         }
         if( inventory != null )
         {
-            Destroy(inventory );
+            inventory.SetActive(false);
         }
-        
+        Time.timeScale = 1.0f;
     }
 }

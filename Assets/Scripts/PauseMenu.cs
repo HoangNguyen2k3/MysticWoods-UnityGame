@@ -11,6 +11,7 @@ public class PauseMenu : MonoBehaviour
     public void Home()
     {
         SceneManager.LoadScene("Menu");
+        
         Time.timeScale = 1.0f;
     }
     public void Resume()
@@ -20,7 +21,17 @@ public class PauseMenu : MonoBehaviour
     }
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        PlayerHealth.Instance.currentHealth = 4;
+        Stamina.Instance.ResetStamina();
+        EconomyManager.Instance.ResetGold();
+        if (GameObject.Find("Player") != null)
+        {
+            Destroy(GameObject.Find("Player"));
+        }
+       
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("Scene1");
+        pauseMenu.SetActive(false);
         Time.timeScale = 1.0f;
 
     }

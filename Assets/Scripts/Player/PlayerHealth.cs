@@ -15,7 +15,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
     [SerializeField] private float damageRecoveryTime = 1f;
 
     private Slider heathSlider;
-    private int currentHealth;
+    public int currentHealth;
     private bool canTakeDamage = true;
     private KnockBack knockBack;
     private Flash flash;
@@ -87,7 +87,8 @@ public class PlayerHealth : Singleton<PlayerHealth>
     {
         yield return new WaitForSeconds(2f);
         Destroy(gameObject);
-        SceneManager.LoadScene(TOWN_TEXT);
+
+        SceneManager.LoadScene("GameOver");
     }
     private void UpdatHealthSlider()
     {
