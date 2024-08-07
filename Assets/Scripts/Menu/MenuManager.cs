@@ -71,15 +71,32 @@ public class MenuManager : MonoBehaviour
     IEnumerator enterGame()
     {
         PlaySoundEnter();
-        yield return new WaitForSeconds(1f);
-        PlaySoundEnter();
+        yield return new WaitForSeconds(0.6f);
+        ApplicationVariables.loadingSceneGame = "Scene1";
+        SceneManager.LoadScene("LoadingScene");
     }
-    void PlaySourceClick()
+   public void PlaySourceClick()
     {
         audioSourceComponent.PlayOneShot(click);
     }
-    void PlaySoundEnter()
+    public void PlaySoundEnter()
     {
         audioSourceComponent.PlayOneShot(enter);
+    }
+    public void Click_Start_Game()
+    {
+        StartCoroutine(enterGame());
+        /*ApplicationVariables.loadingSceneGame = "Scene1";
+        SceneManager.LoadScene("LoadingScene");*/
+    }
+   public  void Click_Settings_Game()
+    {
+        PlaySourceClick();
+        ApplicationVariables.loadingSceneGame = "Setting";
+    }
+    public void Click_Quit_Game()
+    {
+        PlaySourceClick();
+        Application.Quit();
     }
 }

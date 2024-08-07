@@ -16,6 +16,7 @@ public class Shooter : MonoBehaviour,IEnemy
     [SerializeField] private float startingDistant = 0.1f; //Distance start fire bullet
 
     [SerializeField] private bool stagger;
+    [Tooltip("Stagger must be enable for oscillate to function properly")]
     [SerializeField] private bool oscillate;
 
     private bool isShooting = false;

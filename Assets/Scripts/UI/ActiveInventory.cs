@@ -2,25 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActiveInventory : MonoBehaviour
-{
+public class ActiveInventory : Singleton<ActiveInventory> { 
     private int activeSlotIndexNum = 0;
 
     private PlayerController playerController;
 
-    private void Awake()
-    {
+    protected override void Awake()
+    {   
+        base.Awake();
         playerController=new PlayerController();
     }
     private void Start()
     {
         playerController.Inventory.Keyboard.performed += ctx => ToggleActiveSlot((int)ctx.ReadValue<float>());
-
-        ToggleActiveHighLight(0);
     }
     private void OnEnable()
     {
         playerController.Enable();
+    }
+    public void EquipStartingWeapon()
+    {
+        ToggleActiveHighLight(0);
     }
     private void ToggleActiveSlot(int numValue)
     {
@@ -56,10 +58,10 @@ public class ActiveInventory : MonoBehaviour
         }
 
 
-        GameObject newWeapon = Instantiate(weaponToSpawn, ActiveWeapon.Instance.transform.position, Quaternion.identity);
+        GameObject newWeapon = Instantiate(weaponToSpawn, ActiveWeapon.Instance.transform);
 
-        ActiveWeapon.Instance.transform.rotation = Quaternion.Euler(0, 0, 0);
-        newWeapon.transform.parent = ActiveWeapon.Instance.transform;
+      //  ActiveWeapon.Instance.transform.rotation = Quaternion.Euler(0, 0, 0);
+       // newWeapon.transform.parent = ActiveWeapon.Instance.transform;
 
         ActiveWeapon.Instance.NewWeapon(newWeapon.GetComponent<MonoBehaviour>());
     }

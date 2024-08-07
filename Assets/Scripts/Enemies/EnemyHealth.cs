@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -11,18 +12,24 @@ public class EnemyHealth : MonoBehaviour
     private int currentHealth;
     private Flash flash;
     private KnockBack knockBack;
+
+    [SerializeField] FloatingHealthbar healthbar;
     private void Awake()
     {
         flash = GetComponent<Flash>();
         knockBack = GetComponent<KnockBack>();
+        healthbar = GetComponentInChildren<FloatingHealthbar>();
     }
     private void Start()
     {
         currentHealth = startingHealth;
+        healthbar.UpdateHealthBar(currentHealth, startingHealth);
+
     }
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        healthbar.UpdateHealthBar(currentHealth, startingHealth);
         knockBack.GetKnockedBack(Playercontroller.Instance.transform,knockBackThrust);
         StartCoroutine(flash.FlashRoutine());
         StartCoroutine(CheckDetectDeathRoutine());
@@ -37,6 +44,7 @@ public class EnemyHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             Instantiate(deathVFXPrefab,transform.position, Quaternion.identity);
+            GetComponent<PickUpSpawner>().DropItems();
             Destroy(gameObject);
         }
     }
