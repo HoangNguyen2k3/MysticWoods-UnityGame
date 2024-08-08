@@ -5,4 +5,5 @@ using UnityEngine;
 public static class ApplicationVariables
 {
     public static string loadingSceneGame = "";
+    public static bool boss_alive = true;
 }

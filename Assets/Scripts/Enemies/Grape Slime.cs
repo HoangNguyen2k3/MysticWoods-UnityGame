@@ -10,17 +10,19 @@ public class GrapeSlime : MonoBehaviour,IEnemy
     private Animator animator;
     private SpriteRenderer spriteRenderer;
 
+
     readonly int ATTACK_HASH = Animator.StringToHash("Attack");
     private void Awake()
     {
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
+   
     public void Attack()
     {
         animator.SetTrigger(ATTACK_HASH);
         if (transform.position.x - Playercontroller.Instance.transform.position.x < 0) {
-        spriteRenderer.flipX = false;
+            spriteRenderer.flipX = false;
         }
         else
         {

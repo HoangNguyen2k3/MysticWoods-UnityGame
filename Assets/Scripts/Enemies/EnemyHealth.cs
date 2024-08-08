@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private int startingHealth=3;
     [SerializeField] private GameObject deathVFXPrefab;
     [SerializeField] private float knockBackThrust = 15f;
-
+    [SerializeField] bool isBoss = false;
+    private bool winner = false;
     private int currentHealth;
     private Flash flash;
     private KnockBack knockBack;
@@ -43,9 +44,19 @@ public class EnemyHealth : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
+            if (isBoss&&winner==false)
+            {
+                Debug.Log("haha");
+                ApplicationVariables.boss_alive = false;
+                winner = true;
+            }
             Instantiate(deathVFXPrefab,transform.position, Quaternion.identity);
             GetComponent<PickUpSpawner>().DropItems();
             Destroy(gameObject);
+            
+           
         }
     }
+
+
 }

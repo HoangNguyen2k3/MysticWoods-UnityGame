@@ -75,6 +75,7 @@ public class EnemyAI : MonoBehaviour
 
     private void Attacking()
     {
+        
         if (Playercontroller.Instance)
         {
             if (Vector2.Distance(transform.position, Playercontroller.Instance.transform.position) > attackRange)
