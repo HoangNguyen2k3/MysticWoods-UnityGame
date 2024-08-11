@@ -13,6 +13,10 @@ public class EnemyHealth : MonoBehaviour
     private int currentHealth;
     private Flash flash;
     private KnockBack knockBack;
+    [SerializeField] bool secondaryBoss = false;
+    [SerializeField] bool keyBoss = false;
+    [SerializeField] private GameObject skeleton;
+    [SerializeField] private Transform skeletonTransform;
 
     [SerializeField] FloatingHealthbar healthbar;
     private void Awake()
@@ -51,6 +55,20 @@ public class EnemyHealth : MonoBehaviour
                 winner = true;
             }
             Instantiate(deathVFXPrefab,transform.position, Quaternion.identity);
+            if (secondaryBoss)
+            {
+                GetComponent<PickUpSpawnBoss>().DropBossChest();
+                if (ApplicationVariables.add_boss_skeleton > 0)
+            {
+                Instantiate(skeleton,skeletonTransform.position, Quaternion.identity);
+                ApplicationVariables.add_boss_skeleton--;
+            }
+            }
+            if (keyBoss)
+            {
+                GetComponent<PickUpSpawnBoss>().DropBossChest();
+            }
+            
             GetComponent<PickUpSpawner>().DropItems();
             Destroy(gameObject);
             

@@ -333,8 +333,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 3
-  deathVFXPrefab: {fileID: 2329275243874385939, guid: 0a145193a485e9d40adcaf2213b6c108, type: 3}
+  deathVFXPrefab: {fileID: 2329275243874385939, guid: ad43630eb51942644b9ff94b6cd24513, type: 3}
   knockBackThrust: 15
+  isBoss: 0
+  secondaryBoss: 0
+  keyBoss: 0
+  skeleton: {fileID: 0}
+  skeletonTransform: {fileID: 0}
   healthbar: {fileID: 736315679316433970}
 --- !u!114 &6218155119298818105
 MonoBehaviour:

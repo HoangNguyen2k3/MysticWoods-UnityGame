@@ -8,12 +8,10 @@ public class Skeleton : MonoBehaviour, IEnemy
     private SpriteRenderer spriteRenderer;
     private Transform target;
     [SerializeField] private float speed;
-    [SerializeField] private float attackRange = 1.5f;
-    private bool isAttacking = false;
     [SerializeField] private Collider2D damageCollider; // Reference to the damage collider
     [SerializeField] private Vector2 damageColliderOffset; // Offset for the damage collider position
     [SerializeField] private Vector2 damageColliderFlippedOffset; // Offset for the damage collider when flipped
-    [SerializeField] private EnemyHealth health;
+    [SerializeField] private int DistanceFollowPlayer=10;
 
     readonly int ATTACK_HASH = Animator.StringToHash("Attack");
 
@@ -31,7 +29,7 @@ public class Skeleton : MonoBehaviour, IEnemy
 
     public void Update()
     {
-        if (target != null && Vector2.Distance(transform.position, Playercontroller.Instance.transform.position) < 6f)
+        if (target != null && Vector2.Distance(transform.position, Playercontroller.Instance.transform.position) <DistanceFollowPlayer)
         {
             speed = 5f;
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
@@ -51,7 +49,7 @@ public class Skeleton : MonoBehaviour, IEnemy
     public void Attack()
     {
         animator.SetTrigger(ATTACK_HASH);
-        isAttacking = true;
+       // isAttacking = true;
         StartCoroutine(EnableDamageCollider());
     }
 
@@ -62,7 +60,7 @@ public class Skeleton : MonoBehaviour, IEnemy
         damageCollider.enabled = true;
         yield return new WaitForSeconds(0.5f); // Adjust the duration based on the attack animation length
         damageCollider.enabled = false;
-        isAttacking = false;
+        //isAttacking = false;
     }
 
     private void OnTriggerEnter2D(Collider2D other)

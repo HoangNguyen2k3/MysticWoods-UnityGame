@@ -43,7 +43,13 @@ public class PlayerHealth : Singleton<PlayerHealth>
             TakeDamage(1,collision.transform);
             
         }
+        if (collision.gameObject.CompareTag("danger"))
+        {
+            TakeDamage(1, collision.transform);
+        }
+
     }
+    
     public void HealPlayer()
     {
         if(currentHealth < maxHealth)

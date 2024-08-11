@@ -10,6 +10,8 @@ public class LoadingScene : MonoBehaviour
 {
    [SerializeField] private TextMeshProUGUI loadingText;
     private GameObject inventory;
+
+
     void Start()
     {
         StartCoroutine(LoadYourAsyncScene());
@@ -35,11 +37,13 @@ public class LoadingScene : MonoBehaviour
         {
             inventory.SetActive(true);
             GameObject.Find("PauseMenu").SetActive(false);
+
         }
         }
        
 
     }
+
     GameObject FindInactiveObjectByName(string name)
     {
         Transform[] objs = Resources.FindObjectsOfTypeAll<Transform>();

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneManagement : Singleton<SceneManagement>
 {
    public string SceneTransitionName {  get; private set; }
+   
     public void SetTransitionName(string sceneTransitionName)
     {
         this.SceneTransitionName = sceneTransitionName;
@@ -16,6 +17,7 @@ public class SceneManagement : Singleton<SceneManagement>
         {
             StartCoroutine(Wait());
         }
+        
     }
     private IEnumerator Wait()
     {ApplicationVariables.boss_alive = true;

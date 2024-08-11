@@ -14,6 +14,8 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private List<GameObject> menuList;
     int menuIndex = 0;
     [SerializeField] private string nameSelecting = "Menu-Start";
+    
+    
     void SelectNextMenu() {
         menuIndex++;
         if (menuIndex >= 3)
