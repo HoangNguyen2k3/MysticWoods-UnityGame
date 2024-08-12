@@ -56,9 +56,9 @@ public class Skeleton : MonoBehaviour, IEnemy
     private IEnumerator EnableDamageCollider()
     {
         // Enable the collider during the attack animation
-        yield return new WaitForSeconds(0.8f);
+        yield return new WaitForSeconds(0.7f);
         damageCollider.enabled = true;
-        yield return new WaitForSeconds(0.5f); // Adjust the duration based on the attack animation length
+        yield return new WaitForSeconds(0.2f); // Adjust the duration based on the attack animation length
         damageCollider.enabled = false;
         //isAttacking = false;
     }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CheckKey : MonoBehaviour
 {
+    [SerializeField] private GameObject keyObj;
+    [SerializeField] private Transform positionKey;
     GameObject key;
     private void Start()
     {
@@ -11,7 +13,11 @@ public class CheckKey : MonoBehaviour
     }
     void Update()
     {
-        if (ApplicationVariables.taked_key == false)
+        if (key == null&&ApplicationVariables.taked_key==true)
+        {
+            key=Instantiate(keyObj,positionKey.position,Quaternion.identity);
+        }
+        if (ApplicationVariables.taked_key == false||ApplicationVariables.taked_chaliced==true)
         {
             key.SetActive(false);
         }
@@ -20,4 +26,5 @@ public class CheckKey : MonoBehaviour
             key.SetActive(true);
         }
     }
+
 }

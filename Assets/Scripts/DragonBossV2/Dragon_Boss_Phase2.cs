@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Dragon_Boss_Phase2 : MonoBehaviour,IEnemy
@@ -16,6 +17,7 @@ public class Dragon_Boss_Phase2 : MonoBehaviour,IEnemy
     [SerializeField] private Transform left;
     [SerializeField] private Transform right;
     private Transform target_fire;
+    private GameObject spawnedFire;
 
     readonly int ATTACK_NO_BREATH = Animator.StringToHash("Attack");
     readonly int ATTACK_BREATH = Animator.StringToHash("Breath");
@@ -51,6 +53,11 @@ public class Dragon_Boss_Phase2 : MonoBehaviour,IEnemy
                 target_fire = left;
             }
         }
+        if(spawnedFire != null)
+        {
+            spawnedFire.transform.position = Vector2.MoveTowards(spawnedFire.transform.position, target.position, 3f * Time.deltaTime);
+        }
+
     }
 
     public void Attack()
@@ -84,7 +91,7 @@ public class Dragon_Boss_Phase2 : MonoBehaviour,IEnemy
     }
     public void Attack_Breath()
     {
-            GameObject spawnedFire = Instantiate(Fire, target_fire.position, Quaternion.identity);
+            spawnedFire = Instantiate(Fire, target_fire.position, Quaternion.identity);
             StartCoroutine(FireWait(spawnedFire));
     }
 
