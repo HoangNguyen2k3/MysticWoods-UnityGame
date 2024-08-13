@@ -15,6 +15,7 @@ public class EnemyHealth : MonoBehaviour
     private KnockBack knockBack;
     [SerializeField] bool secondaryBoss = false;
     [SerializeField] bool keyBoss = false;
+    [SerializeField] bool flyingBoss = false;
     [SerializeField] private GameObject skeleton;
     [SerializeField] private Transform skeletonTransform;
 
@@ -67,6 +68,10 @@ public class EnemyHealth : MonoBehaviour
             if (keyBoss)
             {
                 GetComponent<PickUpSpawnBoss>().DropBossChest();
+            }
+            if (flyingBoss)
+            {
+                ApplicationVariables.bossFlyingNum--;
             }
             
             GetComponent<PickUpSpawner>().DropItems();

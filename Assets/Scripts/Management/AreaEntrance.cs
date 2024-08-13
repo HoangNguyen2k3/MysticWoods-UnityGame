@@ -8,6 +8,8 @@ public class AreaEntrance : MonoBehaviour
     [SerializeField] private string transitionName;
     [SerializeField] bool isBossMap = false;
     [SerializeField] Transform spawnPlayer;
+    [SerializeField] private GameObject boss;
+    [SerializeField] private Transform boss_entrance;
     private void Start()
     {
         if (isBossMap)
@@ -25,5 +27,17 @@ public class AreaEntrance : MonoBehaviour
                 }
         }
         
+    }
+    private void Update()
+    {
+        if (boss && boss_entrance)
+        {
+            if (ApplicationVariables.bossFlyingNum == 0)
+            {
+                Instantiate(boss, boss_entrance.position, Quaternion.identity);
+                ApplicationVariables.bossFlyingNum = -1;
+            }
+        }
+
     }
 }
