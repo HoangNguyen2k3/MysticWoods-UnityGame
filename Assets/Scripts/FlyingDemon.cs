@@ -5,6 +5,7 @@ using UnityEngine;
 public class FlyingDemon : MonoBehaviour,IEnemy
 {
     [SerializeField] private GameObject projectile;
+    [SerializeField] private GameObject homingProjectile;
     private Transform target;
     [SerializeField] private float DistanceFollowPlayer=10f;
     private Animator animator;
@@ -48,6 +49,19 @@ public class FlyingDemon : MonoBehaviour,IEnemy
     }
     public void Fire()
     {
-        Instantiate(projectile, target_fire.position, Quaternion.identity);
+        int random_bullet = Random.Range(1, 10);
+        if(random_bullet >= 0&&random_bullet<3)
+        {
+            Instantiate(homingProjectile, target_fire.position, Quaternion.identity);
+        }
+        else if(random_bullet>=3&&random_bullet<=9)
+        {
+            Instantiate(projectile, target_fire.position, Quaternion.identity);
+        }
+        else
+        {
+            Debug.Log("Do Nothing");
+        }
+        
     }
 }

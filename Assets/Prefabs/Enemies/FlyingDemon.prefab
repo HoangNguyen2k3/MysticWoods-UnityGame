@@ -634,6 +634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 2329409398533556325, guid: 2fa957a6623e6c64da2f3e4a12d53bf4, type: 3}
+  homingProjectile: {fileID: 8783264628207664168, guid: 948272311677b8342b33917c68a82746, type: 3}
   DistanceFollowPlayer: 30
   speed: 5
   right: {fileID: 3098970860737678343}

@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Dialogue : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public string[] lines;
     public float speed;
-
+    [SerializeField] private bool isStartTalk=false;
     private int index;
 
     void Start()
@@ -57,7 +58,12 @@ public class Dialogue : MonoBehaviour
         }
         else
         {
+            if (isStartTalk)
+            {
+                SceneManager.LoadScene("Scene1");
+            }
             gameObject.SetActive(false);
+
         }
     }
 }

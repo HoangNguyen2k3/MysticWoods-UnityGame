@@ -60,15 +60,13 @@ public class Skeleton : MonoBehaviour, IEnemy
         damageCollider.enabled = true;
         yield return new WaitForSeconds(0.2f); // Adjust the duration based on the attack animation length
         damageCollider.enabled = false;
-        //isAttacking = false;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && damageCollider.enabled)
         {
-            // Deal damage to the player
-            PlayerHealth.Instance.TakeDamage(1,damageCollider.transform); // Adjust the damage value as needed
+            PlayerHealth.Instance.TakeDamage(1,damageCollider.transform);
         }
     }
 

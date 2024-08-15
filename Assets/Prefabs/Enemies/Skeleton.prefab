@@ -521,7 +521,6 @@ GameObject:
   - component: {fileID: 6228501940881371369}
   - component: {fileID: 1197685737230360358}
   - component: {fileID: 2745653229901586061}
-  - component: {fileID: 7285295827658158032}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Untagged
@@ -704,9 +703,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 20
   deathVFXPrefab: {fileID: 2329275243874385939, guid: 670bdf16cfd86a243ab5685cbd3d79d9, type: 3}
-  knockBackThrust: 15
+  knockBackThrust: 10
   isBoss: 0
   secondaryBoss: 1
+  keyBoss: 0
+  flyingBoss: 0
   skeleton: {fileID: 8202275968949990658}
   skeletonTransform: {fileID: 0}
   healthbar: {fileID: 5119318021159512296}
@@ -791,19 +792,6 @@ MonoBehaviour:
   damageColliderFlippedOffset: {x: -3.87, y: 0.3664171}
   DistanceFollowPlayer: 10
 --- !u!114 &2745653229901586061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8202275968949990658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcb49b141b7bf584bad22365e6450738, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chestBoss: {fileID: 8415241380761153804, guid: 85674540762149a4b8ea211ac2d79dce, type: 3}
---- !u!114 &7285295827658158032
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -7,7 +7,12 @@ public class RoadToBoss : MonoBehaviour
 {
     private bool isPlayerInZone = false;
     private Coroutine checkStayCoroutine = null;
+    [SerializeField] private GameObject boxTalk;
 
+    private void Awake()
+    {
+        boxTalk.SetActive(false);
+    }
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player") && !isPlayerInZone)
@@ -43,5 +48,13 @@ public class RoadToBoss : MonoBehaviour
     private void StartMethod()
     {
         SceneManager.LoadScene("Scene5");
+    }
+    private void Update()
+    {
+        if (ApplicationVariables.add_boss_skeleton < 0)
+        {
+            boxTalk.SetActive(true);
+            ApplicationVariables.add_boss_skeleton = 0;
+        }
     }
 }

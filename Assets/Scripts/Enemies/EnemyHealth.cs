@@ -62,8 +62,8 @@ public class EnemyHealth : MonoBehaviour
                 if (ApplicationVariables.add_boss_skeleton > 0)
             {
                 Instantiate(skeleton,skeletonTransform.position, Quaternion.identity);
-                ApplicationVariables.add_boss_skeleton--;
             }
+                ApplicationVariables.add_boss_skeleton--;
             }
             if (keyBoss)
             {

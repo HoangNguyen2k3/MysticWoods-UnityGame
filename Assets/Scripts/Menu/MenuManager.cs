@@ -58,7 +58,7 @@ public class MenuManager : MonoBehaviour
             if (nameSelecting == "Menu-Start")
             {
                 
-                ApplicationVariables.loadingSceneGame = "Scene1";
+                ApplicationVariables.loadingSceneGame = "StartTalk";
                 SceneManager.LoadScene("LoadingScene");
             }else if(nameSelecting == "Menu-Setting")
             {
@@ -73,7 +73,7 @@ public class MenuManager : MonoBehaviour
     IEnumerator enterGame()
     {
         PlaySoundEnter();     
-        ApplicationVariables.loadingSceneGame = "Scene1";
+        ApplicationVariables.loadingSceneGame = "StartTalk";
         yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene("LoadingScene");
     }

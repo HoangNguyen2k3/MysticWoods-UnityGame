@@ -71,6 +71,7 @@ public class Playercontroller : Singleton<Playercontroller>
     {
         if (knockBack.GettingKnockedBack||PlayerHealth.Instance.isDead) { return; }
         rb.MovePosition(rb.position+movement*(moveSpeed*Time.fixedDeltaTime));
+        
     }
     private void AdjustPlayerFacingDirection()
     {
