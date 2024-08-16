@@ -22,6 +22,8 @@ public class Staff : MonoBehaviour,IWeapon
     public void Attack()
     {
         myAnimator.SetTrigger(ATTACK_HASH);
+        MusicManager.Instance.PlaySFX("Laser");
+
     }
     public void SpawnStaffProjectileAnimEvent()
     {

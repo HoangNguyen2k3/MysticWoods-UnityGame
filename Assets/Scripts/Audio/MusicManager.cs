@@ -3,22 +3,41 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using System;
 
-public class MusicManager : MonoBehaviour
+public class MusicManager : Singleton<MusicManager>
 {
-    public static MusicManager Singleton { get; private set; }
+    
+    public Sound[] musicSounds, sfxSounds;
+    public AudioSource musicSource, sfxSource;
+
     private void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
+        PlayMusic("BackGround");
     }
-    private void Awake()
-    { 
-        if(Singleton != null&&Singleton!=this) {
-            Destroy(this.gameObject);
+    public void PlayMusic(string name)
+    {
+        Sound s = Array.Find(musicSounds, x => x.name == name);
+        if (s == null)
+        {
+            Debug.Log("Sound not found");
         }
         else
         {
-            Singleton = this;
+            musicSource.clip = s.clip;
+            musicSource.Play();
+        }
+    }
+    public void PlaySFX(string name)
+    {
+        Sound s = Array.Find(sfxSounds, x => x.name == name);
+        if (s == null)
+        {
+            Debug.Log("SFX not found");
+        }
+        else
+        {
+            sfxSource.PlayOneShot(s.clip);
         }
     }
 }

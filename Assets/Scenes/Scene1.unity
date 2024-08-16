@@ -14029,6 +14029,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 173700468}
     m_Modifications:
+    - target: {fileID: -5829197211991754320, guid: 38860e73d32b7e740995cbf7b7080b6b, type: 3}
+      propertyPath: stagger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5829197211991754320, guid: 38860e73d32b7e740995cbf7b7080b6b, type: 3}
+      propertyPath: oscillate
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 368737192394994653, guid: 38860e73d32b7e740995cbf7b7080b6b, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -18021,8 +18029,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 217726778}
     m_Modifications:
     - target: {fileID: 1520984505838038872, guid: f960f3f6dab73e84bbf553332210c303, type: 3}
+      propertyPath: isStartTalk
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1520984505838038872, guid: f960f3f6dab73e84bbf553332210c303, type: 3}
       propertyPath: lines.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1520984505838038872, guid: f960f3f6dab73e84bbf553332210c303, type: 3}
+      propertyPath: tableLanguageName
+      value: Scene1Talk
       objectReference: {fileID: 0}
     - target: {fileID: 1520984505838038872, guid: f960f3f6dab73e84bbf553332210c303, type: 3}
       propertyPath: lines.Array.data[0]

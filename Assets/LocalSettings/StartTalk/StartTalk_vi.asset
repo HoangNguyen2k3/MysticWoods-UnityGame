@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: StartTalk_vi
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: vi
+  m_SharedData: {fileID: 11400000, guid: 90d35bf8ff035e8428235e6af4ec5d3e, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 21012545536
+    m_Localized: "Ch\xE0o m\u1EEBng b\u1EA1n \u0111\u1EBFn v\u1EDBi Mystic Woods"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3127708352512
+    m_Localized: "Trong th\u1EBF gi\u1EDBi n\xE0y, b\u1EA1n s\u1EBD h\xF3a th\xE2n
+      th\xE0nh m\u1ED9t chi\u1EBFn binh d\u0169ng c\u1EA3m, v\u01B0\u1EE3t qua nh\u1EEFng
+      khu r\u1EEBng th\u1EA7n b\xED \u0111\u1EC3 \u0111\xE1nh b\u1EA1i qu\xE1i v\u1EADt
+      v\xE0 ho\xE0n th\xE0nh c\xE1c nhi\u1EC7m v\u1EE5 gian nan"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3382709452800
+    m_Localized: "H\xE3y s\u1EB5n s\xE0ng b\u01B0\u1EDBc v\xE0o cu\u1ED9c h\xE0nh
+      tr\xECnh \u0111\u1EA7y k\u1EF3 di\u1EC7u, n\u01A1i m\xE0 m\u1ED7i b\u01B0\u1EDBc
+      \u0111i \u0111\u1EC1u mang \u0111\u1EBFn nh\u1EEFng \u0111i\u1EC1u b\u1EA5t
+      ng\u1EDD v\xE0 hi\u1EC3m nguy. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3395611131904
+    m_Localized: "B\u1EA1n c\xF3 \u0111\u1EE7 can \u0111\u1EA3m \u0111\u1EC3 kh\xE1m
+      ph\xE1 m\u1ECDi ng\xF3c ng\xE1ch v\xE0 tr\u1EDF th\xE0nh huy\u1EC1n tho\u1EA1i
+      c\u1EE7a Mystic Woods? H\xE3y c\u1EA7m ch\u1EAFc v\u0169 kh\xED c\u1EE7a m\xECnh
+      v\xE0 b\u1EAFt \u0111\u1EA7u chuy\u1EBFn phi\xEAu l\u01B0u ngay b\xE2y gi\u1EDD!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3632404758528
+    m_Localized: "N\xE0o kh\xE1m ph\xE1 th\u1EBF gi\u1EDBi huy\u1EC1n \u1EA3o n\xE0y
+      ngay th\xF4i"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

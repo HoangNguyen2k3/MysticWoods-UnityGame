@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: ChaliceFound_vi
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: vi
+  m_SharedData: {fileID: 11400000, guid: 7065fe6320f67b84bac35a6ba097fbab, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 15748694016
+    m_Localized: "\u1ED2, c\xE1i r\u01B0\u01A1ng tuy\u1EC7t v\u1EDDi \u0111\xF3 c\xF3
+      th\u1EC3 l\u1EA5y m\u1ED9t s\u1ED1 dame qua r\u01B0\u01A1ng, ch\xFAng ta c\xF3
+      th\u1EC3 l\u1EA5y nh\u1EEFng v\u1EADt ph\u1EA9m b\xED \u1EA9n v\xE0 \u0111\u01B0a
+      n\xF3 v\xE0o v\u1ECB tr\xED b\u1ECB thi\u1EBFu"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

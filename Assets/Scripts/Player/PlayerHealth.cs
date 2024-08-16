@@ -61,7 +61,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
     public void TakeDamage(int damageAmount,Transform hitTransform)
     {
         if (!canTakeDamage) { return; }
-
+        MusicManager.Instance.PlaySFX("PlayerTakeDamage");
         ScreenShakeManager.Instance.ShakeScreen();
 
         knockBack.GetKnockedBack(hitTransform, knockBackThrustAmount);

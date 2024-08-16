@@ -7,9 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    [SerializeField] private AudioSource audioSourceComponent;
-    [SerializeField] private AudioClip click;
-    [SerializeField] private AudioClip enter;
     [SerializeField] private GameObject selectIcon;
     [SerializeField] private List<GameObject> menuList;
     int menuIndex = 0;
@@ -79,11 +76,11 @@ public class MenuManager : MonoBehaviour
     }
    public void PlaySourceClick()
     {
-        audioSourceComponent.PlayOneShot(click);
+        MusicManager.Instance.PlaySFX("Click");
     }
     public void PlaySoundEnter()
     {
-        audioSourceComponent.PlayOneShot(enter);
+        MusicManager.Instance.PlaySFX("EnterGame");
     }
     public void Click_Start_Game()
     {
@@ -95,7 +92,8 @@ public class MenuManager : MonoBehaviour
    public  void Click_Settings_Game()
     {
         PlaySourceClick();
-        ApplicationVariables.loadingSceneGame = "Setting";
+        ApplicationVariables.loadingSceneGame = "Settings";
+        SceneManager.LoadScene("LoadingScene");
     }
     public void Click_Quit_Game()
     {

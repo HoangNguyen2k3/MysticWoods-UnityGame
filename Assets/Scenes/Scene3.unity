@@ -667,6 +667,8 @@ MonoBehaviour:
   transitionName: ToBossEntry
   isBossMap: 0
   spawnPlayer: {fileID: 0}
+  boss: {fileID: 0}
+  boss_entrance: {fileID: 0}
 --- !u!1001 &306684284
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10025,7 +10027,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3875207181502268608, guid: e2679de3181e81a4b82e0489f5f3163f, type: 3}
       propertyPath: startingHealth
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4373811494815949518, guid: e2679de3181e81a4b82e0489f5f3163f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26835,6 +26837,8 @@ MonoBehaviour:
   transitionName: HEntry
   isBossMap: 0
   spawnPlayer: {fileID: 0}
+  boss: {fileID: 0}
+  boss_entrance: {fileID: 0}
 --- !u!1 &5796792718365695917
 GameObject:
   m_ObjectHideFlags: 0
@@ -26896,11 +26900,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2963149055433967550, guid: e2679de3181e81a4b82e0489f5f3163f, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2963149055433967550, guid: e2679de3181e81a4b82e0489f5f3163f, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4373811494815949518, guid: e2679de3181e81a4b82e0489f5f3163f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26948,7 +26952,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5282552205436783185, guid: e2679de3181e81a4b82e0489f5f3163f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

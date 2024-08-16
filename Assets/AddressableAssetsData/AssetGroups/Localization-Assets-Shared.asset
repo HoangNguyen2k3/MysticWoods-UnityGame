@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Assets-Shared
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-Assets-Shared
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 353e617fa71c6bc4a8c21335f6d62bcc
+  m_SerializeEntries:
+  - m_GUID: a5ef0d6221e771a4b981fc77c84bdc2d
+    m_Address: Assets/LocalSettings/Table/StringExampleTable Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 90d35bf8ff035e8428235e6af4ec5d3e
+    m_Address: Assets/LocalSettings/StartTalk/StartTalk Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d5ed29a354b95f443ba70855a3fb3b6a
+    m_Address: Assets/LocalSettings/Scene1Talk Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7065fe6320f67b84bac35a6ba097fbab
+    m_Address: Assets/LocalSettings/ChaliceFound Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1dbcbf506db7e68468af11090dd5c4f3
+    m_Address: Assets/LocalSettings/SecondaryData Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 58398279a6d4cd34ba2fc6daf1ffeca1, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 0b427261829517c43a70d6e61c7882af, type: 2}
+    - {fileID: 11400000, guid: ab1b98a1a90c99846acb0d5be012b235, type: 2}

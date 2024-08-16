@@ -35,4 +35,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StartTalk.unity
     guid: 28284f876686cf94f8237f2c76b75acb
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/Scenes/Settings.unity
+    guid: 926143680efd1c6439d1bed9af0d367f
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 2bc5feab093a5574cbf659743784bc49, type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: 57604ea0cb337b149acff6732f8417e5, type: 2}

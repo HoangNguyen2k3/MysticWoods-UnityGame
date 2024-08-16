@@ -133,11 +133,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2007460057769651612, guid: f1b86882b4b79aa4a9a63bf56e533803, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.39344883
+      value: -0.40526867
       objectReference: {fileID: 0}
     - target: {fileID: 2007460057769651612, guid: f1b86882b4b79aa4a9a63bf56e533803, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0146699995
+      value: -0.01469
       objectReference: {fileID: 0}
     - target: {fileID: 2106417202129781207, guid: f1b86882b4b79aa4a9a63bf56e533803, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13470,6 +13470,10 @@ PrefabInstance:
     - target: {fileID: 1520984505838038872, guid: f960f3f6dab73e84bbf553332210c303, type: 3}
       propertyPath: lines.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1520984505838038872, guid: f960f3f6dab73e84bbf553332210c303, type: 3}
+      propertyPath: tableLanguageName
+      value: ChaliceFound
       objectReference: {fileID: 0}
     - target: {fileID: 1520984505838038872, guid: f960f3f6dab73e84bbf553332210c303, type: 3}
       propertyPath: lines.Array.data[0]

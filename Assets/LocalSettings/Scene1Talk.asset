@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: Scene1Talk
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: d5ed29a354b95f443ba70855a3fb3b6a, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: 432dcf36e59f1a246b2afe820a6066b4, type: 2}
+  - {fileID: 11400000, guid: 38a9c0a76c71fe246be405c6fa9e0ab6, type: 2}
+  m_Extensions: []
+  m_Group: String Table
+  references:
+    version: 2
+    RefIds: []

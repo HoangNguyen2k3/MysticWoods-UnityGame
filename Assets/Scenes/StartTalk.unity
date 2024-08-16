@@ -300,6 +300,10 @@ PrefabInstance:
       propertyPath: isStartTalk
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1520984505838038872, guid: f960f3f6dab73e84bbf553332210c303, type: 3}
+      propertyPath: tableLanguageName
+      value: StartTalk
+      objectReference: {fileID: 0}
     - target: {fileID: 1576080285891445094, guid: f960f3f6dab73e84bbf553332210c303, type: 3}
       propertyPath: m_Name
       value: DialogueBox
