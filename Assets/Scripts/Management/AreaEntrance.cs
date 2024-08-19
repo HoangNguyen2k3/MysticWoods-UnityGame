@@ -34,10 +34,20 @@ public class AreaEntrance : MonoBehaviour
         {
             if (ApplicationVariables.bossFlyingNum == 0)
             {
-                Instantiate(boss, boss_entrance.position, Quaternion.identity);
+                StartCoroutine(BossAppear());
+                ScreenShakeManager.Instance.ShakeScreen();
+                ScreenShakeManager.Instance.ShakeScreen();
+                
                 ApplicationVariables.bossFlyingNum = -1;
             }
         }
 
     }
+    private IEnumerator BossAppear()
+    {
+        yield return new WaitForSeconds(2f);
+        ScreenShakeManager.Instance.ShakeScreen();
+        Instantiate(boss, boss_entrance.position, Quaternion.identity);
+    }
+
 }

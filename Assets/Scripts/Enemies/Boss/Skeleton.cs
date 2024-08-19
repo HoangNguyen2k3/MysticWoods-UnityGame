@@ -58,6 +58,8 @@ public class Skeleton : MonoBehaviour, IEnemy
         // Enable the collider during the attack animation
         yield return new WaitForSeconds(0.7f);
         damageCollider.enabled = true;
+        MusicManager.Instance.PlaySFX("2ndBossAttack");
+
         yield return new WaitForSeconds(0.2f); // Adjust the duration based on the attack animation length
         damageCollider.enabled = false;
     }

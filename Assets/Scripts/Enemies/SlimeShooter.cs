@@ -14,7 +14,7 @@ public class SlimeShooter : MonoBehaviour,IEnemy
     [SerializeField] private float restTime = 1f;
 
     private bool isShooting = false;
-
+  
     public void Attack()
     {
         if (!isShooting)

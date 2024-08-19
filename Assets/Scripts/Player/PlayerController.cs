@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Localization.Plugins.XLIFF.V20;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -51,7 +52,19 @@ public class Playercontroller : Singleton<Playercontroller>
     private void Update()
     {
         PlayerInput();
+        /*Collider2D playerCollider = GetComponent<Collider2D>();
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.zero);
+        if (hit.collider != null && hit.collider.CompareTag("ForceGround"))
+        {
+            Debug.Log("Haha");
+            playerCollider.enabled = false;
+        }
+        else
+        {
+            playerCollider.enabled = true;
+        }*/
     }
+
     private void FixedUpdate()
     {
         AdjustPlayerFacingDirection();
@@ -92,6 +105,8 @@ public class Playercontroller : Singleton<Playercontroller>
     {
         if (!isDashing && Stamina.Instance.CurrentStamina>0)
         {
+            MusicManager.Instance.PlaySFX("Dash");
+            PlayerHealth.Instance.canTakeDamage = false;
             Stamina.Instance.UseStamina();
             isDashing = true;
             moveSpeed += dashSpeed;
@@ -109,5 +124,6 @@ public class Playercontroller : Singleton<Playercontroller>
         myTrailRenderer.emitting=false;
         yield return new WaitForSeconds(dashCD);
         isDashing =false;
+        PlayerHealth.Instance.canTakeDamage = true;
     }
 }

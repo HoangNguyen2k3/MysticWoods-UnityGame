@@ -19,10 +19,10 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 15748694016
-    m_Localized: "\u1ED2, c\xE1i r\u01B0\u01A1ng tuy\u1EC7t v\u1EDDi \u0111\xF3 c\xF3
-      th\u1EC3 l\u1EA5y m\u1ED9t s\u1ED1 dame qua r\u01B0\u01A1ng, ch\xFAng ta c\xF3
-      th\u1EC3 l\u1EA5y nh\u1EEFng v\u1EADt ph\u1EA9m b\xED \u1EA9n v\xE0 \u0111\u01B0a
-      n\xF3 v\xE0o v\u1ECB tr\xED b\u1ECB thi\u1EBFu"
+    m_Localized: "Tuy\u1EC7t , c\xE1i r\u01B0\u01A1ng tuy\u1EC7t v\u1EDDi \u0111\xF3
+      c\xF3 th\u1EC3 l\u1EA5y m\u1ED9t s\u1ED1 dame qua r\u01B0\u01A1ng, ch\xFAng
+      ta c\xF3 th\u1EC3 l\u1EA5y nh\u1EEFng v\u1EADt ph\u1EA9m b\xED \u1EA9n v\xE0
+      \u0111\u01B0a n\xF3 v\xE0o v\u1ECB tr\xED b\u1ECB thi\u1EBFu"
     m_Metadata:
       m_Items: []
   references:

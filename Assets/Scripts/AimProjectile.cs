@@ -44,17 +44,14 @@ public class AimProjectile : MonoBehaviour
 
         if (!other.isTrigger && (enemyHealth || indestructible || player))
         {
-            Debug.Log("0");
             if ((player && isEnemyProjectile) || (enemyHealth && !isEnemyProjectile))
             {
-                Debug.Log("1");
                 player?.TakeDamage(1, transform);
                 Instantiate(particalOnHitPrefabVFX, transform.position, transform.rotation);
                 Destroy(gameObject);
             }
             else if (indestructible)
             {
-                Debug.Log("2");
                 Instantiate(particalOnHitPrefabVFX, transform.position, transform.rotation);
                 Destroy(gameObject);
             }

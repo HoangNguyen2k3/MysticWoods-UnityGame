@@ -21,7 +21,13 @@ public class GameOver : MonoBehaviour
         }
         if (isWinner)
         {
+            Debug.Log("You win");
             MusicManager.Instance.PlaySFX("Winner");
+            if (!PlayerPrefs.HasKey("Round1"))
+            {
+                Debug.Log("Haha");
+                PlayerPrefs.SetString("Round1", "win");
+            }
         }
         else
         {

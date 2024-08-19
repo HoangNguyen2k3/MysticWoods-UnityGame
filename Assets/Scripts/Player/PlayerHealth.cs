@@ -16,7 +16,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
 
     private Slider heathSlider;
     public int currentHealth;
-    private bool canTakeDamage = true;
+    public bool canTakeDamage = true;
     private KnockBack knockBack;
     private Flash flash;
 
@@ -43,13 +43,17 @@ public class PlayerHealth : Singleton<PlayerHealth>
             TakeDamage(1,collision.transform);
             
         }
+       
+
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
         if (collision.gameObject.CompareTag("danger"))
         {
             TakeDamage(1, collision.transform);
         }
-
     }
-    
+
     public void HealPlayer()
     {
         if(currentHealth < maxHealth)

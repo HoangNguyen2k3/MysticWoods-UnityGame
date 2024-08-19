@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f801794676bca0e41bb716ea17c4133d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 8
   particalOnHitPrefabVFX: {fileID: 2329275243874385939, guid: acbb273af55e30b499da5dc5f9e2f08c, type: 3}
   isEnemyProjectile: 1
   projectileRange: 20

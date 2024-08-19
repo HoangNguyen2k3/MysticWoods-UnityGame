@@ -25,13 +25,14 @@ public class Dialogue : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            MusicManager.Instance.PlaySFX("Click");
+            
             if (textComponent.text == lines[index])
             {
                 NextLine();
             }
             else
             {
+                MusicManager.Instance.PlaySFX("Click");
                 StopAllCoroutines();
                 textComponent.text = lines[index];
             }

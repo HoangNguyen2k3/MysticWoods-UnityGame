@@ -10077,13 +10077,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8894090813253685300, guid: e2679de3181e81a4b82e0489f5f3163f, type: 3}
+      propertyPath: enemyType
+      value: 
+      objectReference: {fileID: 1134660152}
+    m_RemovedComponents:
+    - {fileID: 4172737534405568288, guid: e2679de3181e81a4b82e0489f5f3163f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5282552205436783185, guid: e2679de3181e81a4b82e0489f5f3163f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1134660151}
+    - targetCorrespondingSourceObject: {fileID: 5282552205436783185, guid: e2679de3181e81a4b82e0489f5f3163f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1134660152}
   m_SourcePrefab: {fileID: 100100000, guid: e2679de3181e81a4b82e0489f5f3163f, type: 3}
 --- !u!1 &1134660150 stripped
 GameObject:
@@ -10103,6 +10111,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chestBoss: {fileID: 6993977840157557012, guid: 674387e80202c64479aa88c11b094b21, type: 3}
+--- !u!114 &1134660152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1134660150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebef16b3785b5b64e80171195c38ad6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 4014287970894766744, guid: f397a3b139d8d944abe13d5685e412a5, type: 3}
+  bulletMoveSpeed: 6
+  burstCount: 5
+  projectilesPerBurst: 30
+  angleSpread: 359
+  startingDistance: 0.1
+  timeBetweenBursts: 0.2
+  restTime: 3
 --- !u!4 &1197479249 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4373811494815949518, guid: e2679de3181e81a4b82e0489f5f3163f, type: 3}

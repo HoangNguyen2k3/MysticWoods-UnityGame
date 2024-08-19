@@ -56,6 +56,7 @@ public class Pickup : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<Playercontroller>())
         {
+            MusicManager.Instance.PlaySFX("ClaimItem");
             DetectPickupType();
             Destroy(gameObject);
         }

@@ -92,8 +92,12 @@ public class MenuManager : MonoBehaviour
    public  void Click_Settings_Game()
     {
         PlaySourceClick();
-        ApplicationVariables.loadingSceneGame = "Settings";
-        SceneManager.LoadScene("LoadingScene");
+        SceneManager.LoadScene("Settings");
+    }
+    public void Click_Levels_Game()
+    {
+        PlaySourceClick();
+        SceneManager.LoadScene("LevelMenu");
     }
     public void Click_Quit_Game()
     {
