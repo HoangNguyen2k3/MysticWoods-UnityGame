@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9265a8ca3cf7584797b3237daf5e70f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 15
   knockBackThrustAmount: 10
   damageRecoveryTime: 1
   currentHealth: 0

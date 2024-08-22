@@ -5,11 +5,15 @@ using UnityEngine;
 public class CheckKey : MonoBehaviour
 {
     [SerializeField] private GameObject keyObj;
+    [SerializeField] private GameObject chaliceObj;
     [SerializeField] private Transform positionKey;
     GameObject key;
+    GameObject chalice;
     private void Start()
     {
         key = GameObject.FindGameObjectWithTag("Key");
+        chalice = GameObject.FindGameObjectWithTag("Chalice");
+       // Debug.Log(ApplicationVariables.taked_chaliced);
     }
     void Update()
     {
@@ -24,6 +28,19 @@ public class CheckKey : MonoBehaviour
         else
         {
             key.SetActive(true);
+        }
+        if (chalice == null && ApplicationVariables.taked_chaliced == true)
+        {
+            chalice = Instantiate(chaliceObj, positionKey.position, Quaternion.identity);
+        }
+        if (ApplicationVariables.taked_chaliced == false)
+        {
+
+            chalice.SetActive(false);
+        }
+        else
+        {
+            chalice.SetActive(true);
         }
     }
 

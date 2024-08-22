@@ -47,6 +47,7 @@ public class RoadToBoss : MonoBehaviour
 
     private void StartMethod()
     {
+        ApplicationVariables.taked_chaliced = false;
         SceneManager.LoadScene("Scene5");
     }
     private void Update()

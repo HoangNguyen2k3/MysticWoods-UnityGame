@@ -13,6 +13,9 @@ public class Skeleton : MonoBehaviour, IEnemy
     [SerializeField] private Vector2 damageColliderFlippedOffset; // Offset for the damage collider when flipped
     [SerializeField] private int DistanceFollowPlayer=10;
 
+    [SerializeField] private GameObject slashBossRight;
+    [SerializeField] private GameObject slashBossLeft;
+    private bool turnleft=true;
     readonly int ATTACK_HASH = Animator.StringToHash("Attack");
 
     private void Awake()
@@ -20,6 +23,8 @@ public class Skeleton : MonoBehaviour, IEnemy
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         damageCollider.enabled = false; // Disable the collider initially
+        slashBossLeft.SetActive(false);
+        slashBossRight.SetActive(false);
     }
 
     private void Start()
@@ -37,11 +42,13 @@ public class Skeleton : MonoBehaviour, IEnemy
             {
                 spriteRenderer.flipX = false;
                 damageCollider.offset = damageColliderOffset; // Set collider position for non-flipped state
+                turnleft = true;
             }
             else
             {
                 spriteRenderer.flipX = true;
                 damageCollider.offset = damageColliderFlippedOffset; // Set collider position for flipped state
+                turnleft=false;
             }
         }
     }
@@ -70,6 +77,22 @@ public class Skeleton : MonoBehaviour, IEnemy
         {
             PlayerHealth.Instance.TakeDamage(1,damageCollider.transform);
         }
+    }
+    public IEnumerator AttackSlashAddBoss()
+    {
+        if (turnleft)
+        {
+            //Instantiate(slashBossLeft,slashBossLeft.transform.position, Quaternion.identity);
+            slashBossLeft.gameObject.SetActive(true);
+        }
+        else
+        {
+            //Instantiate(slashBossRight, slashBossRight.transform.position, Quaternion.identity);
+            slashBossRight.gameObject.SetActive(true);
+        }
+        yield return new WaitForSeconds(0.2f);
+        slashBossLeft.gameObject.SetActive(false);
+        slashBossRight.gameObject.SetActive(false);
     }
 
 }

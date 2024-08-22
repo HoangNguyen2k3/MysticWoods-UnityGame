@@ -281,7 +281,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &250080093
 RectTransform:
   m_ObjectHideFlags: 0
@@ -298,10 +298,10 @@ RectTransform:
   - {fileID: 798572578}
   m_Father: {fileID: 1968223082}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50, y: -140}
+  m_SizeDelta: {x: 300, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &250080094
 MonoBehaviour:
@@ -2513,7 +2513,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -9, y: 119}
+  m_AnchoredPosition: {x: -9, y: 136}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1968223083
@@ -2536,7 +2536,7 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 200, y: 50}
+  m_CellSize: {x: 300, y: 80}
   m_Spacing: {x: 0, y: 10}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -3081,7 +3081,7 @@ PrefabInstance:
     - target: {fileID: 505166522909298194, guid: 6cd3a281d30507a4995dd0c52344de66, type: 3}
       propertyPath: sfxSounds.Array.data[4].clip
       value: 
-      objectReference: {fileID: 8300000, guid: bb8cec64630f977438e5169a8cd36dd2, type: 3}
+      objectReference: {fileID: 8300000, guid: 2fc2fa5871dda60469ac53bfa2ef6468, type: 3}
     - target: {fileID: 505166522909298194, guid: 6cd3a281d30507a4995dd0c52344de66, type: 3}
       propertyPath: sfxSounds.Array.data[4].name
       value: Sword

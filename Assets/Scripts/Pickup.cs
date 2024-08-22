@@ -1,4 +1,4 @@
-using JetBrains.Rider.Unity.Editor;
+//using JetBrains.Rider.Unity.Editor;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

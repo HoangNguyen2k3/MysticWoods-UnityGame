@@ -37,6 +37,7 @@ public class GameOver : MonoBehaviour
     }
     public void Restart()
     {
+        ApplicationVariables.add_boss_skeleton = 1;
         PlayerHealth.Instance.currentHealth = 4;
         Stamina.Instance.ResetStamina();
         EconomyManager.Instance.ResetGold();
@@ -53,7 +54,7 @@ public class GameOver : MonoBehaviour
         GameObject player = GameObject.Find("Player");
         Playercontroller playercontroller = GetComponent<Playercontroller>();
         ApplicationVariables.taked_key = false;
-        SceneManager.LoadSceneAsync(2);
+        SceneManager.LoadSceneAsync(0);
         if (player != null)
         {
             Destroy(player);

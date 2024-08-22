@@ -7,6 +7,9 @@ TagManager:
   - Key
   - danger
   - ForceGround
+  - Chalice
+  - SlashBossAttack
+  - ProjectileEnemy
   layers:
   - Default
   - TransparentFX

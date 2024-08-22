@@ -12,7 +12,7 @@ public class ManagerButton : MonoBehaviour
         GameObject inventory = GameObject.Find("UICanvas");
         GameObject player = GameObject.Find("Player");
         Playercontroller playercontroller=GetComponent<Playercontroller>();
-        SceneManager.LoadSceneAsync(2);
+        SceneManager.LoadSceneAsync(0);
         if(player != null)
         {   
             Destroy(player);

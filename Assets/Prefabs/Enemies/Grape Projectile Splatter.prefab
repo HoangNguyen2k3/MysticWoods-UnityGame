@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7523288073802081068}
   m_Layer: 0
   m_Name: Grape Projectile Splatter
-  m_TagString: Untagged
+  m_TagString: ProjectileEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

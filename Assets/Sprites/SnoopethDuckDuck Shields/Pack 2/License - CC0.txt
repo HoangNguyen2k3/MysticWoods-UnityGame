@@ -1,0 +1,4 @@
+This pack uses a CC0 license:
+https://creativecommons.org/public-domain/cc0/
+
+You can modify and use it commercially, no strings attached.

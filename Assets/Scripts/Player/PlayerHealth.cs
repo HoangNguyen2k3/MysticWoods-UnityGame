@@ -14,6 +14,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
     [SerializeField] private float knockBackThrustAmount = 10f;
     [SerializeField] private float damageRecoveryTime = 1f;
 
+    public bool shield = false;
     private Slider heathSlider;
     public int currentHealth;
     public bool canTakeDamage = true;
@@ -46,12 +47,21 @@ public class PlayerHealth : Singleton<PlayerHealth>
        
 
     }
+/*    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("SlashBossAttack"))
+        {
+            Debug.Log("take damage");
+            TakeDamage(1, collision.transform);
+        }
+    }*/
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("danger"))
         {
             TakeDamage(1, collision.transform);
         }
+      
     }
 
     public void HealPlayer()
@@ -64,6 +74,15 @@ public class PlayerHealth : Singleton<PlayerHealth>
     }
     public void TakeDamage(int damageAmount,Transform hitTransform)
     {
+        if (shield == true)
+        {
+            MusicManager.Instance.PlaySFX("PlayerTakeDamage");
+            ScreenShakeManager.Instance.ShakeScreen();
+            knockBack.GetKnockedBack(hitTransform, knockBackThrustAmount);
+            StartCoroutine(flash.FlashRoutine());
+            shield = false;
+            return;
+        }
         if (!canTakeDamage) { return; }
         MusicManager.Instance.PlaySFX("PlayerTakeDamage");
         ScreenShakeManager.Instance.ShakeScreen();
