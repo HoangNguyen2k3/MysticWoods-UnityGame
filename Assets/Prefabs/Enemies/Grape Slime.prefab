@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 6208915351288756348}
   m_Layer: 0
   m_Name: Grape Slime
-  m_TagString: Untagged
+  m_TagString: GrapeSlime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -338,6 +338,7 @@ MonoBehaviour:
   isBoss: 0
   secondaryBoss: 0
   keyBoss: 0
+  flyingBoss: 0
   skeleton: {fileID: 0}
   skeletonTransform: {fileID: 0}
   healthbar: {fileID: 736315679316433970}

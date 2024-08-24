@@ -53,7 +53,7 @@ public class Dialogue : MonoBehaviour
         if (localizedStringTable != null)
         {
             lines = new string[localizedStringTable.Count];
-            Debug.Log(localizedStringTable.Count);
+       //     Debug.Log(localizedStringTable.Count);
             for (int i = 0; i < localizedStringTable.Count; i++)
             {
                 var entry = localizedStringTable.GetEntry(i.ToString());

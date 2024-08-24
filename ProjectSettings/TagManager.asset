@@ -10,6 +10,11 @@ TagManager:
   - Chalice
   - SlashBossAttack
   - ProjectileEnemy
+  - BlueSlime
+  - Bush
+  - Barrels
+  - Barrels1
+  - GrapeSlime
   layers:
   - Default
   - TransparentFX
