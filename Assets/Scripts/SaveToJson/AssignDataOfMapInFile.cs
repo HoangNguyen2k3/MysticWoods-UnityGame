@@ -35,6 +35,7 @@ public class AssignDataOfMapInFile : MonoBehaviour
             foreach (var e in enemy)
             {
                 EnemiesInScene enemyData = new EnemiesInScene();
+                enemyData.name= e.tag;
                 enemyData.position = e.transform.position;
                 saving.sceneManage.enemiesInScene.Add(enemyData);
             }

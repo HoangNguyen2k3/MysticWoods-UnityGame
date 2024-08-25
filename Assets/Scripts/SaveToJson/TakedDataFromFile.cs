@@ -6,9 +6,8 @@ using UnityEngine.SceneManagement;
 public class TakedDataFromFile : MonoBehaviour
 {
     
-    [SerializeField] private GameObject enemysPrefab;
-    /*    [SerializeField] private GameObject bushPrefab;
-        [SerializeField] private GameObject barrelsPrefab;*/
+    [SerializeField] private List<GameObject> enemysPrefab;
+    [SerializeField] private List<string> nameTagPrefabEnemys;
     [SerializeField] private List<GameObject> enviromentsPrefab;
     [SerializeField] private List<string> nameTagPrefabEnvironments;
     private SavingFile saving;
@@ -23,6 +22,7 @@ public class TakedDataFromFile : MonoBehaviour
             saving = FindObjectOfType<SavingFile>();
             if (saving != null)
             {
+                Debug.Log("saving not null");
                 GameObject enemiesParent = GameObject.Find("Enemies");
                 if (enemiesParent != null)
                 {
@@ -34,7 +34,6 @@ public class TakedDataFromFile : MonoBehaviour
                     environmentParent.SetActive(false);
                 }
                 saving.LoadData();
-
                 if (saving.sceneManage != null)
                 {
                     
@@ -55,9 +54,17 @@ public class TakedDataFromFile : MonoBehaviour
                     }
                     foreach (var enemy in saving.sceneManage.enemiesInScene)
                     {
-                        if (enemysPrefab != null)
+                        GameObject prefab_enemy = null;
+                        for(int i = 0; i < nameTagPrefabEnemys.Count; i++)
                         {
-                            Instantiate(enemysPrefab, enemy.position, Quaternion.identity);
+                            if (enemy.name == nameTagPrefabEnemys[i])
+                            {
+                                prefab_enemy = enemysPrefab[i];
+                            }
+                        }
+                        if (prefab_enemy != null)
+                        {
+                            Instantiate(prefab_enemy, enemy.position, Quaternion.identity);
                         }
                     }
                 }
@@ -72,12 +79,13 @@ public class TakedDataFromFile : MonoBehaviour
             if (ApplicationVariables.numNameSaveScene >= ApplicationVariables.nameKeySaveScene.Count)
             {
                 ApplicationVariables.nameKeySaveScene.Add(sceneKey);
+                ApplicationVariables.numNameSaveScene++;
             }
             else
             {
                 ApplicationVariables.nameKeySaveScene[ApplicationVariables.numNameSaveScene] = sceneKey;
             }
-            ApplicationVariables.numNameSaveScene++;
+            
         }
     }
 }

@@ -197,7 +197,6 @@ MonoBehaviour:
   goldCoin: {fileID: 4398750275497203442, guid: 3d82a09e1d25f4440a44d28e71895f2c, type: 3}
   key: {fileID: 4450642516781567169, guid: 7b352bd0016cefa4fa2f74b68574ea97, type: 3}
   iskeychest: 1
-  ischalicechest: 0
 --- !u!114 &8408261726471736758
 MonoBehaviour:
   m_ObjectHideFlags: 0

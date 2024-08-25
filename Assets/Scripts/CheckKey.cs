@@ -17,6 +17,9 @@ public class CheckKey : MonoBehaviour
     }
     void Update()
     {
+        if(key == null&&ApplicationVariables.taked_key==false) {
+            return;
+        }
         if (key == null&&ApplicationVariables.taked_key==true)
         {
             key=Instantiate(keyObj,positionKey.position,Quaternion.identity);

@@ -23440,7 +23440,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55e2bb307888dc8468fbcfb56ed70111, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemysPrefab: {fileID: 391367709263271897, guid: bdbfc08e34a094d4f83c1ed6d00d9cce, type: 3}
+  enemysPrefab:
+  - {fileID: 391367709263271897, guid: bdbfc08e34a094d4f83c1ed6d00d9cce, type: 3}
+  nameTagPrefabEnemys:
+  - GrapeSlime
   enviromentsPrefab:
   - {fileID: 2419858192318551902, guid: b1730dc0c56455d45be7744df0be1b81, type: 3}
   - {fileID: 2419858192318551902, guid: 9efa94dd07460134db3fe52ff656b419, type: 3}

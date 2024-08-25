@@ -19,10 +19,12 @@ public class PickUpSpawnerChest : MonoBehaviour
         }
         if (ApplicationVariables.taked_key == false&&iskeychest)
         {
+            Debug.Log("Key chest spawn");
             Instantiate(key, transform.position, Quaternion.identity);
         }
         if (ApplicationVariables.taked_key == true)
         {
+            Debug.Log("Chalice spawn");
             Instantiate(key, transform.position, Quaternion.identity);
         }
     }

@@ -15,6 +15,7 @@ public class SceneManage
 [System.Serializable]
 public class EnemiesInScene
 {
+    public string name;
     public Vector3 position;
 }
 [System.Serializable]

@@ -15,6 +15,9 @@ TagManager:
   - Barrels
   - Barrels1
   - GrapeSlime
+  - Ghost
+  - ThreeBarrels
+  - GhostKey
   layers:
   - Default
   - TransparentFX
