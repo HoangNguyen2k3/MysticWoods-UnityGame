@@ -99,6 +99,11 @@ public class MenuManager : MonoBehaviour
         PlaySourceClick();
         SceneManager.LoadScene("LevelMenu");
     }
+    public void Click_Shop_Game()
+    {
+        PlaySourceClick();
+        SceneManager.LoadScene("Shop");
+    }
     public void Click_Quit_Game()
     {
         PlaySourceClick();

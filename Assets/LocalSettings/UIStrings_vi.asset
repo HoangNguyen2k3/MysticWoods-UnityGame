@@ -76,6 +76,10 @@ MonoBehaviour:
     m_Localized: "C\u1EA5p \u0111\u1ED9"
     m_Metadata:
       m_Items: []
+  - m_Id: 3532190955732992
+    m_Localized: "C\u1EEDa h\xE0ng"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

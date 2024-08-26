@@ -16,6 +16,15 @@ public class GameOver : MonoBehaviour
             goldText = GameObject.Find(COIN_AMOUNT_TEXT).GetComponent<TMP_Text>();
         }
         goldText.text=EconomyManager.Instance.currentGold.ToString()+" POINTS";
+        if (!PlayerPrefs.HasKey("totalScore"))
+        {
+            PlayerPrefs.SetInt("totalScore", EconomyManager.Instance.currentGold);
+        }
+        else
+        {
+            int tempScore = PlayerPrefs.GetInt("totalScore");
+            PlayerPrefs.SetInt("totalScore", tempScore+EconomyManager.Instance.currentGold);
+        }
         if (EconomyManager.Instance.currentGold > PlayerPrefs.GetInt("bestScore")&&PlayerPrefs.HasKey("bestScore")) {
             PlayerPrefs.SetInt("bestScore", EconomyManager.Instance.currentGold);
         }
