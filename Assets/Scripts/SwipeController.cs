@@ -25,7 +25,10 @@ public class SwipeController : MonoBehaviour, IEndDragHandler
         currentPage = 1;
         targetPos = levelPagesRect.localPosition;
         dragThreshould = Screen.width / 15;
-        UpdateBar();
+        if (barClosed != null && barOpen != null)
+        {
+            UpdateBar();
+        }
         UpdateArrowButton();
     }
     public void Next()
@@ -52,7 +55,11 @@ public class SwipeController : MonoBehaviour, IEndDragHandler
             tween.reset();
         }
         tween = levelPagesRect.LeanMoveLocal(targetPos, tweenTime).setEase(tweenType);
-        UpdateBar();
+        if (barClosed != null && barOpen != null)
+        {
+            UpdateBar();
+        }
+       
         UpdateArrowButton();
     }
 
@@ -84,6 +91,9 @@ public class SwipeController : MonoBehaviour, IEndDragHandler
     }
     void UpdateArrowButton()
     {
+        if(nextBtn == null||previousBtn==null) {
+            return;
+        }
         nextBtn.interactable = true;
         previousBtn.interactable = true;
         if (currentPage == 1)
