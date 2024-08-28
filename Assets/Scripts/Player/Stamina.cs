@@ -18,6 +18,10 @@ public class Stamina : Singleton<Stamina>
     protected override void Awake()
     {
         base.Awake();
+        if (PlayerPrefs.HasKey("Stamina"))
+        {
+            startingStamina = PlayerPrefs.GetInt("Stamina");
+        }
         maxStamina = startingStamina;
         CurrentStamina = startingStamina;
     }

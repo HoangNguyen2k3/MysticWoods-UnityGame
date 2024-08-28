@@ -35,7 +35,7 @@ public class ShieldForce : MonoBehaviour
     }
     private IEnumerator ShieldForce_1()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(timePreventDamage);
         PlayerHealth.Instance.canTakeDamage = true;
         Destroy(gameObject);
        

@@ -3,8 +3,6 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
-
-    
     public void Pause()
     {
         pauseMenu.SetActive(true);
@@ -24,7 +22,7 @@ public class PauseMenu : MonoBehaviour
         {
             Destroy(GameObject.Find("Player"));
         }
-       
+        DeleteKeySaveScene.Instance.RestartSceneGame();
         // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         SceneManager.LoadScene("Scene1");
         pauseMenu.SetActive(false);

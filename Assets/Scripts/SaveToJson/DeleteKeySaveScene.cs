@@ -12,4 +12,12 @@ public class DeleteKeySaveScene : Singleton<DeleteKeySaveScene>
             PlayerPrefs.DeleteKey(ApplicationVariables.nameKeySaveScene[i]);
         }
     }
+    public void RestartSceneGame()
+    {
+        for (int i = 0; i < ApplicationVariables.numNameSaveScene; i++)
+        {
+            Debug.Log(ApplicationVariables.nameKeySaveScene[i]);
+            PlayerPrefs.DeleteKey(ApplicationVariables.nameKeySaveScene[i]);
+        }
+    }
 }

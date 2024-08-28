@@ -25,6 +25,17 @@ public class ShopManager : MonoBehaviour
         }
 
     }
+    private void Update()
+    {
+        if (PlayerPrefs.HasKey("totalScore"))
+        {
+            score_gold.text = PlayerPrefs.GetInt("totalScore").ToString();
+        }
+        else
+        {
+            score_gold.text = "0";
+        }
+    }
     public void Upgrade()
     {
         btn1.interactable = false;

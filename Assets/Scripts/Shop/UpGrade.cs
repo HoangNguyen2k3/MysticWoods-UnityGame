@@ -8,16 +8,16 @@ public class UpGrade : MonoBehaviour
 {
     [SerializeField] private Slider sliderHeath;
     [SerializeField] private Slider sliderStamina;
-
     [SerializeField] private Button buyHealth;
     [SerializeField] private Button buyStamina;
-    private int BEGIN_HEALTH = 10;
-    private int BEGIN_STAMINA = 3;
-    private int PRICE_HEALTH = 50;
-    private int PRICE_STAMINA = 30;
+    private const int BEGIN_HEALTH = 10;
+    private const int BEGIN_STAMINA = 3;
+    private const int PRICE_HEALTH = 50;
+    private const int PRICE_STAMINA = 30;
     private void Start()
-    { 
-
+    {
+        sliderHeath.maxValue = 10;
+        sliderStamina.maxValue = 3;
         if (PlayerPrefs.HasKey("Health"))
         {
             sliderHeath.value = PlayerPrefs.GetInt("Health")-BEGIN_HEALTH;
@@ -25,6 +25,7 @@ public class UpGrade : MonoBehaviour
         else
         {
             sliderHeath.value = 0;
+
             PlayerPrefs.SetInt("Health", BEGIN_HEALTH);
         }
         if (PlayerPrefs.HasKey("Stamina"))
@@ -46,7 +47,7 @@ public class UpGrade : MonoBehaviour
         }
         else
         {
-            buyHealth.interactable = false; 
+            buyHealth.interactable = true; 
         }
         if (PlayerPrefs.GetInt("totalScore") < PRICE_STAMINA)
         {
@@ -59,7 +60,7 @@ public class UpGrade : MonoBehaviour
     }
     public void UpdateHealth()
     {
-        if (sliderHeath.value == 5)
+        if (sliderHeath.value == 10)
         {
             return;
         }
@@ -71,7 +72,7 @@ public class UpGrade : MonoBehaviour
     }
     public void UpdateStamina()
     {
-        if (sliderStamina.value == 2)
+        if (sliderStamina.value == 3)
         {
             return;
         }

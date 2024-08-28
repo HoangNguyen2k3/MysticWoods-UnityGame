@@ -944,15 +944,15 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 989096877}
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 10
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 10
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1258,7 +1258,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 40.97902, y: -164}
+  m_AnchoredPosition: {x: 63.1, y: -164}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &230225472
@@ -2305,7 +2305,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 507392842}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1359996223}
+        m_TargetAssemblyTypeName: CharacterShop, Assembly-CSharp
+        m_MethodName: BuyMagician
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &507392842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3350,8 +3362,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -871.0114, y: 419}
-  m_SizeDelta: {x: 165.9412, y: 89.582}
+  m_AnchoredPosition: {x: -854.6243, y: 419}
+  m_SizeDelta: {x: 198.7113, y: 89.582}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &727383884
 MonoBehaviour:
@@ -3485,7 +3497,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -712, y: 430.5}
+  m_AnchoredPosition: {x: -685, y: 430.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &785073850
@@ -6504,7 +6516,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1298428813}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1359996223}
+        m_TargetAssemblyTypeName: CharacterShop, Assembly-CSharp
+        m_MethodName: BuySamurai
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1298428813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6822,8 +6846,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -47, y: -165.99994}
-  m_SizeDelta: {x: 100, y: 50}
+  m_AnchoredPosition: {x: -5.9066, y: -165.99994}
+  m_SizeDelta: {x: 159.4256, y: 50}
   m_Pivot: {x: 0.5902083, y: 0.50000006}
 --- !u!114 &1335170154
 MonoBehaviour:
@@ -6879,7 +6903,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 4
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -7013,6 +7037,7 @@ GameObject:
   - component: {fileID: 1359996221}
   - component: {fileID: 1359996220}
   - component: {fileID: 1359996219}
+  - component: {fileID: 1359996223}
   m_Layer: 5
   m_Name: Scroll View Character
   m_TagString: Untagged
@@ -7124,6 +7149,33 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1359996223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359996216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7e5199715d4094f9fee256b1092daf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  priceCharacters: 0000000020030000dc050000d0070000
+  buttons:
+  - {fileID: 1498341800}
+  - {fileID: 2083088742}
+  - {fileID: 1298428812}
+  - {fileID: 507392841}
+  price:
+  - {fileID: 1975829886}
+  - {fileID: 1653878577}
+  - {fileID: 1402066437}
+  - {fileID: 1335170154}
+  coins:
+  - {fileID: 230225472}
+  - {fileID: 1440291979}
+  - {fileID: 1997234728}
 --- !u!1 &1361031326
 GameObject:
   m_ObjectHideFlags: 0
@@ -7628,8 +7680,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -59, y: -165.99994}
-  m_SizeDelta: {x: 100, y: 50}
+  m_AnchoredPosition: {x: -19.69358, y: -165.99994}
+  m_SizeDelta: {x: 155.036, y: 50}
   m_Pivot: {x: 0.5902083, y: 0.50000006}
 --- !u!114 &1402066437
 MonoBehaviour:
@@ -7685,7 +7737,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 4
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -7762,7 +7814,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 25.979004, y: -164}
+  m_AnchoredPosition: {x: 51.1, y: -164}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1440291979
@@ -7958,7 +8010,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1498341801}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1359996223}
+        m_TargetAssemblyTypeName: CharacterShop, Assembly-CSharp
+        m_MethodName: DefaultCharacter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1498341801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8287,15 +8351,15 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 284196974}
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 10
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 10
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -8926,8 +8990,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -44, y: -165.99994}
-  m_SizeDelta: {x: 100, y: 50}
+  m_AnchoredPosition: {x: -3.7058, y: -165.99994}
+  m_SizeDelta: {x: 192.304, y: 50}
   m_Pivot: {x: 0.5902083, y: 0.50000006}
 --- !u!114 &1653878577
 MonoBehaviour:
@@ -8983,7 +9047,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 4
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -10607,7 +10671,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 37.97888, y: -164}
+  m_AnchoredPosition: {x: 71, y: -164}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1997234728
@@ -11154,7 +11218,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2083088743}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1359996223}
+        m_TargetAssemblyTypeName: CharacterShop, Assembly-CSharp
+        m_MethodName: BuyBower
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2083088743
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -22,13 +22,16 @@ public class PlayerHealth : Singleton<PlayerHealth>
     private Flash flash;
 
     const string HEALTH_SLIDER_TEXT = "Health Slider";
-    const string TOWN_TEXT = "Scene1";
     readonly int DEATH_HASH = Animator.StringToHash("Death");
     protected override void Awake()
     {
         base.Awake();
         flash = GetComponent<Flash>();
         knockBack = GetComponent<KnockBack>();
+        if (PlayerPrefs.HasKey("Health"))
+        {
+            maxHealth = PlayerPrefs.GetInt("Health");
+        }
     }
     private void Start()
     {
@@ -91,6 +94,10 @@ public class PlayerHealth : Singleton<PlayerHealth>
         StartCoroutine(flash.FlashRoutine());
         canTakeDamage = false;
         currentHealth -= damageAmount;
+        if(currentHealth < 0)
+        {
+            currentHealth = 0;
+        }
         StartCoroutine(DamageRecoveryRoutine());
         UpdatHealthSlider();
         CheckIfPlayerDeath();

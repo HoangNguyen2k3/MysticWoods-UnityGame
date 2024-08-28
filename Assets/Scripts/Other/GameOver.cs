@@ -50,6 +50,7 @@ public class GameOver : MonoBehaviour
         PlayerHealth.Instance.currentHealth = 4;
         Stamina.Instance.ResetStamina();
         EconomyManager.Instance.ResetGold();
+        DeleteKeySaveScene.Instance.RestartSceneGame();
         if (GameObject.Find("Player") != null)
         {
             Destroy(GameObject.Find("Player"));
@@ -63,6 +64,7 @@ public class GameOver : MonoBehaviour
         GameObject player = GameObject.Find("Player");
         Playercontroller playercontroller = GetComponent<Playercontroller>();
         ApplicationVariables.taked_key = false;
+        DeleteKeySaveScene.Instance.RestartSceneGame();
         SceneManager.LoadSceneAsync(0);
         if (player != null)
         {
