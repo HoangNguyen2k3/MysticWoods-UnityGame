@@ -29,14 +29,20 @@ public class GameOver : MonoBehaviour
             PlayerPrefs.SetInt("bestScore", EconomyManager.Instance.currentGold);
         }
         if (isWinner)
-        {
-            Debug.Log("You win");
-            MusicManager.Instance.PlaySFX("Winner");
-            if (!PlayerPrefs.HasKey("Round1"))
+        {   MusicManager.Instance.PlaySFX("Winner");
+            if (ApplicationVariables.numLevelCurrency == 1)
             {
-                Debug.Log("Haha");
-                PlayerPrefs.SetString("Round1", "win");
-            }
+                if (!PlayerPrefs.HasKey("Round1"))
+                {
+                    PlayerPrefs.SetString("Round1", "win");
+                }
+            }else if (ApplicationVariables.numLevelCurrency == 2)
+            {
+                if (!PlayerPrefs.HasKey("Round2"))
+                {
+                    PlayerPrefs.SetString("Round2", "win");
+                }
+            }          
         }
         else
         {
@@ -56,7 +62,14 @@ public class GameOver : MonoBehaviour
             Destroy(GameObject.Find("Player"));
         }
         ApplicationVariables.taked_key = false;
-        SceneManager.LoadScene("Scene1");
+        if(ApplicationVariables.numLevelCurrency == 1)
+        {
+            SceneManager.LoadScene("Scene1");
+        }else if(ApplicationVariables.numLevelCurrency == 2)
+        {
+            SceneManager.LoadScene("Level2_1");
+        }
+
     }
     public void ToMenu()
     {

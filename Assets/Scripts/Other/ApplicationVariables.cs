@@ -12,4 +12,8 @@ public static class ApplicationVariables
     public static int bossFlyingNum = 4;
     public static List<string> nameKeySaveScene = new List<string>();
     public static int numNameSaveScene=0;
+    public static int numLevelCurrency = 1;
+    public static bool startTalk = false;
+    public static int maxHealthCurrent = 0;
+    
 }

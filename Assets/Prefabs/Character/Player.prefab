@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5369769716167712107}
   - component: {fileID: 8199402626482825390}
   - component: {fileID: 8756404024739700111}
-  - component: {fileID: 903537855034308419}
   - component: {fileID: 347401057723467547}
   - component: {fileID: 4391683480143238697}
   - component: {fileID: 8259492663299573382}
@@ -19,6 +18,7 @@ GameObject:
   - component: {fileID: 6255219694023308226}
   - component: {fileID: 2490217334041684975}
   - component: {fileID: 5820614853675446094}
+  - component: {fileID: 1216402453123582521}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -123,22 +123,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &903537855034308419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 722340631798262820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c12c1402adf5094884abad749b69cff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  dashSpeed: 15
-  myTrailRenderer: {fileID: 3684321298170445144}
-  weaponCollider: {fileID: 6054323314366902432}
 --- !u!95 &347401057723467547
 Animator:
   serializedVersion: 5
@@ -223,6 +207,7 @@ MonoBehaviour:
   maxHealth: 15
   knockBackThrustAmount: 10
   damageRecoveryTime: 1
+  shield: 0
   currentHealth: 0
   canTakeDamage: 1
 --- !u!114 &6255219694023308226
@@ -266,6 +251,32 @@ MonoBehaviour:
   FullStaminaImage: {fileID: 21300000, guid: 0ea354237ee2e824c89d99ce7233deba, type: 3}
   EmptyStaminaImage: {fileID: 21300000, guid: 3e2e4fbfe81165242a104a45f2c221bd, type: 3}
   timeBetweenStaminaRefresh: 3
+--- !u!114 &1216402453123582521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722340631798262820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c12c1402adf5094884abad749b69cff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterSprites:
+  - {fileID: -485602291, guid: cfd289131890caa408e38a59c362ec2d, type: 3}
+  - {fileID: 1279226014, guid: 2f50a1e68eaf3d84db92f02ac563a19e, type: 3}
+  - {fileID: 274536136, guid: a6cc48638e0b97640beae377f56d3281, type: 3}
+  - {fileID: -971827411, guid: 108d2a333de222a43a0cf6d3bfb5176c, type: 3}
+  characterAnimators:
+  - {fileID: 9100000, guid: c5a2ffdd1b0e7ce4fa7711c9953ff10a, type: 2}
+  - {fileID: 9100000, guid: fd599d3e675280a43b390ff82c48baaf, type: 2}
+  - {fileID: 9100000, guid: 6a9fba6f007279347a7de8d9040655c0, type: 2}
+  - {fileID: 9100000, guid: 3b9b1908ea6395543a9426e68875cfe1, type: 2}
+  moveSpeed: 5
+  dashSpeed: 15
+  myTrailRenderer: {fileID: 3684321298170445144}
+  weaponCollider: {fileID: 6054323314366902432}
 --- !u!1 &1692126129271936497
 GameObject:
   m_ObjectHideFlags: 0

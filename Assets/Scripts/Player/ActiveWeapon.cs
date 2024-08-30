@@ -19,6 +19,11 @@ public class ActiveWeapon : Singleton<ActiveWeapon>
     {
         playerController.Enable();
     }
+    //add
+    private void OnDisable()
+    {
+        playerController.Disable();
+    }
     private void Start()
     {
         playerController.Combat.Attack.started += _ => StartAttacking();

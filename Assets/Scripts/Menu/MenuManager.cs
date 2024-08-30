@@ -40,7 +40,7 @@ public class MenuManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+/*        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             SelectPreviousMenu();
             PlaySourceClick();
@@ -65,12 +65,22 @@ public class MenuManager : MonoBehaviour
             {
                 Application.Quit();
             }
-        }
+        }*/
     }
     IEnumerator enterGame()
     {
-        PlaySoundEnter();     
-        ApplicationVariables.loadingSceneGame = "StartTalk";
+        PlaySoundEnter();
+        if (ApplicationVariables.startTalk == false)
+        {
+            Debug.Log("hi");
+            ApplicationVariables.loadingSceneGame = "StartTalk";
+            ApplicationVariables.startTalk = true;
+        }
+        else
+        {
+            ApplicationVariables.loadingSceneGame = "Scene1";
+        }
+
         yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene("LoadingScene");
     }
@@ -85,9 +95,6 @@ public class MenuManager : MonoBehaviour
     public void Click_Start_Game()
     {
         StartCoroutine(enterGame());
-        
-        /*ApplicationVariables.loadingSceneGame = "Scene1";
-        SceneManager.LoadScene("LoadingScene");*/
     }
    public  void Click_Settings_Game()
     {

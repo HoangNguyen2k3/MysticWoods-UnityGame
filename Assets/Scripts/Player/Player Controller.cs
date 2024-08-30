@@ -214,6 +214,54 @@ public partial class @PlayerController: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""SpecialSkill"",
+            ""id"": ""b234c5db-11ac-4f4b-bddc-04489226ee21"",
+            ""actions"": [
+                {
+                    ""name"": ""Special1"",
+                    ""type"": ""Button"",
+                    ""id"": ""c669aa76-f5f5-4cfd-b81b-ad7cb7afc510"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Special2"",
+                    ""type"": ""Button"",
+                    ""id"": ""5acfbbc3-50ec-400e-8978-14c15250bd42"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""9975a69e-6491-4656-9dde-0a3d26751947"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Special1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bb8af7d3-405b-43c4-a5f3-4b3725ef4688"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Special2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -228,6 +276,10 @@ public partial class @PlayerController: IInputActionCollection2, IDisposable
         // Inventory
         m_Inventory = asset.FindActionMap("Inventory", throwIfNotFound: true);
         m_Inventory_Keyboard = m_Inventory.FindAction("Keyboard", throwIfNotFound: true);
+        // SpecialSkill
+        m_SpecialSkill = asset.FindActionMap("SpecialSkill", throwIfNotFound: true);
+        m_SpecialSkill_Special1 = m_SpecialSkill.FindAction("Special1", throwIfNotFound: true);
+        m_SpecialSkill_Special2 = m_SpecialSkill.FindAction("Special2", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -431,6 +483,60 @@ public partial class @PlayerController: IInputActionCollection2, IDisposable
         }
     }
     public InventoryActions @Inventory => new InventoryActions(this);
+
+    // SpecialSkill
+    private readonly InputActionMap m_SpecialSkill;
+    private List<ISpecialSkillActions> m_SpecialSkillActionsCallbackInterfaces = new List<ISpecialSkillActions>();
+    private readonly InputAction m_SpecialSkill_Special1;
+    private readonly InputAction m_SpecialSkill_Special2;
+    public struct SpecialSkillActions
+    {
+        private @PlayerController m_Wrapper;
+        public SpecialSkillActions(@PlayerController wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Special1 => m_Wrapper.m_SpecialSkill_Special1;
+        public InputAction @Special2 => m_Wrapper.m_SpecialSkill_Special2;
+        public InputActionMap Get() { return m_Wrapper.m_SpecialSkill; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(SpecialSkillActions set) { return set.Get(); }
+        public void AddCallbacks(ISpecialSkillActions instance)
+        {
+            if (instance == null || m_Wrapper.m_SpecialSkillActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_SpecialSkillActionsCallbackInterfaces.Add(instance);
+            @Special1.started += instance.OnSpecial1;
+            @Special1.performed += instance.OnSpecial1;
+            @Special1.canceled += instance.OnSpecial1;
+            @Special2.started += instance.OnSpecial2;
+            @Special2.performed += instance.OnSpecial2;
+            @Special2.canceled += instance.OnSpecial2;
+        }
+
+        private void UnregisterCallbacks(ISpecialSkillActions instance)
+        {
+            @Special1.started -= instance.OnSpecial1;
+            @Special1.performed -= instance.OnSpecial1;
+            @Special1.canceled -= instance.OnSpecial1;
+            @Special2.started -= instance.OnSpecial2;
+            @Special2.performed -= instance.OnSpecial2;
+            @Special2.canceled -= instance.OnSpecial2;
+        }
+
+        public void RemoveCallbacks(ISpecialSkillActions instance)
+        {
+            if (m_Wrapper.m_SpecialSkillActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(ISpecialSkillActions instance)
+        {
+            foreach (var item in m_Wrapper.m_SpecialSkillActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_SpecialSkillActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public SpecialSkillActions @SpecialSkill => new SpecialSkillActions(this);
     public interface IMovementActions
     {
         void OnMove(InputAction.CallbackContext context);
@@ -443,5 +549,10 @@ public partial class @PlayerController: IInputActionCollection2, IDisposable
     public interface IInventoryActions
     {
         void OnKeyboard(InputAction.CallbackContext context);
+    }
+    public interface ISpecialSkillActions
+    {
+        void OnSpecial1(InputAction.CallbackContext context);
+        void OnSpecial2(InputAction.CallbackContext context);
     }
 }

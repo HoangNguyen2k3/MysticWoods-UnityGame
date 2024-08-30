@@ -122,12 +122,15 @@ public class Playercontroller : Singleton<Playercontroller>
 
 using System.Collections;
 using System.Collections.Generic;
-//using UnityEditor.Localization.Plugins.XLIFF.V20;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Playercontroller : Singleton<Playercontroller>
 {
+    [SerializeField] private Sprite[] characterSprites;
+    [SerializeField] private RuntimeAnimatorController[] characterAnimators;
+
+
     public bool FacingLeft { get { return facingLeft; } set { facingLeft = value; } }
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float dashSpeed = 15f;
@@ -156,20 +159,48 @@ public class Playercontroller : Singleton<Playercontroller>
         spriteRenderer = GetComponent<SpriteRenderer>();
         myTrailRenderer.emitting = false;
         knockBack = GetComponent<KnockBack>();
+       
     }
     private void Start()
     {
+        if (!PlayerPrefs.HasKey("CharacterInUse"))
+        {
+            PlayerPrefs.SetInt("CharacterInUse", 0);
+        }
+        if (PlayerPrefs.HasKey("Bower") && PlayerPrefs.GetInt("CharacterInUse") == 1)
+        {
+            ChangeCharacter(1);
+        }
+        else if (PlayerPrefs.HasKey("Samurai") && PlayerPrefs.GetInt("CharacterInUse") == 2)
+        {
+            ChangeCharacter(2);
+        }
+        else if (PlayerPrefs.HasKey("Magician") && PlayerPrefs.GetInt("CharacterInUse") == 3)
+        {
+            ChangeCharacter(3);
+        }
+        else
+        {
+            ChangeCharacter(0);
+        }
         playerControls.Combat.Dash.performed += _ => Dash();
         startingMoveSpeed = moveSpeed;
         ActiveInventory.Instance.EquipStartingWeapon();
     }
+    //Change Character
+    public void ChangeCharacter(int characterIndex)
+    {
+        spriteRenderer.sprite = characterSprites[characterIndex];
+        myAnimator.runtimeAnimatorController = characterAnimators[characterIndex];
+    }
+
     private void OnEnable()
     {
         playerControls.Enable();
     }
     private void OnDisable()
     {
-        playerControls.Disable();
+       playerControls.Disable();
     }
     private void Update()
     {

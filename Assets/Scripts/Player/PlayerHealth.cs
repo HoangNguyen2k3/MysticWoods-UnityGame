@@ -23,14 +23,34 @@ public class PlayerHealth : Singleton<PlayerHealth>
 
     const string HEALTH_SLIDER_TEXT = "Health Slider";
     readonly int DEATH_HASH = Animator.StringToHash("Death");
+    const int DEFAULT_HEALTH_PLAYER = 10;
+    const int MAX_HEALTH_BOWER = 12;
+    const int MAX_HEALTH_SAMURAI = 18;
+    const int MAX_HEALTH_MAGICIAN = 15;
     protected override void Awake()
     {
+        int characterInUse = PlayerPrefs.GetInt("CharacterInUse");
         base.Awake();
         flash = GetComponent<Flash>();
         knockBack = GetComponent<KnockBack>();
         if (PlayerPrefs.HasKey("Health"))
         {
             maxHealth = PlayerPrefs.GetInt("Health");
+            if (PlayerPrefs.HasKey("CharacterInUse"))
+            {
+                if (characterInUse == 1)
+                {
+                    maxHealth = PlayerPrefs.GetInt("Health") - DEFAULT_HEALTH_PLAYER+MAX_HEALTH_BOWER;
+                }
+                else if(characterInUse == 2)
+                {
+                    maxHealth = PlayerPrefs.GetInt("Health") - DEFAULT_HEALTH_PLAYER + MAX_HEALTH_SAMURAI;
+                }else if(characterInUse == 3)
+                {
+                    maxHealth = PlayerPrefs.GetInt("Health") - DEFAULT_HEALTH_PLAYER + MAX_HEALTH_MAGICIAN;
+                }
+            }
+            ApplicationVariables.maxHealthCurrent = maxHealth;
         }
     }
     private void Start()
@@ -126,7 +146,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
 
         SceneManager.LoadScene("GameOver");
     }
-    private void UpdatHealthSlider()
+    public void UpdatHealthSlider()
     {
         if (heathSlider==null)
         {

@@ -1283,7 +1283,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Comming Soon
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1665,8 +1665,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 746337299}
-        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: Click_Start_Game
+        m_TargetAssemblyTypeName: LevelChooseManager, Assembly-CSharp
+        m_MethodName: Choose_Level_Enter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1735,12 +1735,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 746337293}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d05fa1901f5c06748ad816d76466f487, type: 3}
+  m_Script: {fileID: 11500000, guid: 880233d4f0a0a26448717ec748ed5add, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectIcon: {fileID: 0}
-  menuList: []
-  nameSelecting: Menu-Start
+  level_name: StartTalk
 --- !u!1 &801695646
 GameObject:
   m_ObjectHideFlags: 0
@@ -3365,6 +3363,7 @@ GameObject:
   - component: {fileID: 1469975216}
   - component: {fileID: 1469975215}
   - component: {fileID: 1469975218}
+  - component: {fileID: 1469975219}
   m_Layer: 5
   m_Name: Level 2
   m_TagString: Untagged
@@ -3431,11 +3430,23 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1469975216}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1469975219}
+        m_TargetAssemblyTypeName: LevelChooseManager, Assembly-CSharp
+        m_MethodName: Choose_Level_Enter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1469975216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3486,6 +3497,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7bea1b4d8a20d9498803e149477f44f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1469975219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469975213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 880233d4f0a0a26448717ec748ed5add, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level_name: Level2_1
 --- !u!1 &1499825598
 GameObject:
   m_ObjectHideFlags: 0

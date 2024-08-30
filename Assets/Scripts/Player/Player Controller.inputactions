@@ -192,6 +192,54 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "SpecialSkill",
+            "id": "b234c5db-11ac-4f4b-bddc-04489226ee21",
+            "actions": [
+                {
+                    "name": "Special1",
+                    "type": "Button",
+                    "id": "c669aa76-f5f5-4cfd-b81b-ad7cb7afc510",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Special2",
+                    "type": "Button",
+                    "id": "5acfbbc3-50ec-400e-8978-14c15250bd42",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "9975a69e-6491-4656-9dde-0a3d26751947",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Special1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bb8af7d3-405b-43c4-a5f3-4b3725ef4688",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Special2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

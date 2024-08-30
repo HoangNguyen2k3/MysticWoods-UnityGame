@@ -13,6 +13,8 @@ public class CharacterShop : MonoBehaviour
     private int num_Character = 4;
     private void Start()
     {
+        PlayerPrefs.SetInt("Samurai", 1);
+        PlayerPrefs.SetInt("Magician", 1);
         if (PlayerPrefs.HasKey("CharacterInUse"))
         {
             int temp = PlayerPrefs.GetInt("CharacterInUse");
