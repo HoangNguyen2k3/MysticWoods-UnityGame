@@ -1077,13 +1077,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9071278489861664363}
+  - component: {fileID: 4316829941918599203}
   m_Layer: 5
   m_Name: Bower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &9071278489861664363
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1107,6 +1108,30 @@ RectTransform:
   m_AnchoredPosition: {x: -885, y: 228}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4316829941918599203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651280968871938382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 144bef30cbd3e144e9985ef88d748af4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillQ: {fileID: 4862693477877264204, guid: 84b3e44ba9c0a924f82c063e77e13412, type: 3}
+  skillE: {fileID: 4865069336278181577, guid: d1a6620e796eb44459ec19fa0422baf3, type: 3}
+  SpawnSkillQ: {fileID: 0}
+  SpawnSkillE: {fileID: 0}
+  skillQCooldown: 10
+  skillECooldown: 15
+  imageSkillQ: {fileID: 8783265408622066590}
+  imageSkillE: {fileID: 7157701766053853144}
+  isSkillMouseQ: 1
+  isSkillMouseE: 1
+  isSkillDirectionMouseQ: 0
+  isSkillDirectionMouseE: 0
 --- !u!1 &1660710127195148641
 GameObject:
   m_ObjectHideFlags: 0
@@ -1970,6 +1995,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7529422916715716495}
+  - component: {fileID: 6377684296849060014}
   m_Layer: 5
   m_Name: Samurai
   m_TagString: Untagged
@@ -2000,6 +2026,30 @@ RectTransform:
   m_AnchoredPosition: {x: -885, y: 228}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6377684296849060014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2948618320428950654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 144bef30cbd3e144e9985ef88d748af4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillQ: {fileID: 911205256849040691, guid: eda581f22ec22a040918860e3484218a, type: 3}
+  skillE: {fileID: 4032678998544497724, guid: 9aab80b8a94c27049afccd803bae5ba2, type: 3}
+  SpawnSkillQ: {fileID: 0}
+  SpawnSkillE: {fileID: 0}
+  skillQCooldown: 10
+  skillECooldown: 15
+  imageSkillQ: {fileID: 5222555956735534807}
+  imageSkillE: {fileID: 468615949796756972}
+  isSkillMouseQ: 1
+  isSkillMouseE: 0
+  isSkillDirectionMouseQ: 0
+  isSkillDirectionMouseE: 1
 --- !u!1 &2956367691756486333
 GameObject:
   m_ObjectHideFlags: 0
@@ -3185,13 +3235,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4700114164102175458}
+  - component: {fileID: 2535150302940982799}
   m_Layer: 5
   m_Name: NormalPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4700114164102175458
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3215,6 +3266,30 @@ RectTransform:
   m_AnchoredPosition: {x: -885, y: 228}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2535150302940982799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4583061154136083153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 144bef30cbd3e144e9985ef88d748af4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillQ: {fileID: 4014287970894766744, guid: 7e63e0ebb5719b64fb6436e19ac1e444, type: 3}
+  skillE: {fileID: 1306684759380961022, guid: 3be6ef9b7f1009848ae6217b78472ec1, type: 3}
+  SpawnSkillQ: {fileID: 0}
+  SpawnSkillE: {fileID: 0}
+  skillQCooldown: 10
+  skillECooldown: 15
+  imageSkillQ: {fileID: 8965945936314440087}
+  imageSkillE: {fileID: 8697456172380561283}
+  isSkillMouseQ: 0
+  isSkillMouseE: 0
+  isSkillDirectionMouseQ: 0
+  isSkillDirectionMouseE: 0
 --- !u!1 &4701233978818672689
 GameObject:
   m_ObjectHideFlags: 0
@@ -6707,7 +6782,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: meteorite rain (Q)
+  m_text: thunder magic (Q)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6770,7 +6845,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -56.717476, w: 0}
+  m_margin: {x: 0, y: 0, z: -65.78509, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -7448,13 +7523,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3678399859292770038}
+  - component: {fileID: 724314706107268669}
   m_Layer: 5
   m_Name: Magician
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3678399859292770038
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7478,6 +7554,30 @@ RectTransform:
   m_AnchoredPosition: {x: -885, y: 228}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &724314706107268669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8689582464204172342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 144bef30cbd3e144e9985ef88d748af4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillQ: {fileID: 1003792771138580856, guid: c37af8811754bb144a342b2a748f8ede, type: 3}
+  skillE: {fileID: 8316206696140718421, guid: 757638f4a6837694ba26cf64ca88704a, type: 3}
+  SpawnSkillQ: {fileID: 0}
+  SpawnSkillE: {fileID: 0}
+  skillQCooldown: 5
+  skillECooldown: 1
+  imageSkillQ: {fileID: 2096792018557306974}
+  imageSkillE: {fileID: 2175815556603482883}
+  isSkillMouseQ: 0
+  isSkillMouseE: 0
+  isSkillDirectionMouseQ: 1
+  isSkillDirectionMouseE: 0
 --- !u!1 &8925193432278288624
 GameObject:
   m_ObjectHideFlags: 0
