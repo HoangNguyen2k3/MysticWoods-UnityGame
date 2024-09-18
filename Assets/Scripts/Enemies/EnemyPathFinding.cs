@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class EnemyPathFinding : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 2f;
+    [SerializeField] public float moveSpeed = 2f;
 
     private Rigidbody2D rb;
     private Vector2 moveDir;
     private KnockBack knockback;
     private SpriteRenderer spriteRenderer;
+    [SerializeField] private bool reverse_Enemies = false;
 
     private void Awake()
     {
@@ -17,21 +18,47 @@ public class EnemyPathFinding : MonoBehaviour
         knockback = GetComponent<KnockBack>();
         rb = GetComponent<Rigidbody2D>();
     }
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        StartCoroutine(WaitReverseDir());
+    }
+    private IEnumerator WaitReverseDir()
+    {
+        
+        yield return new WaitForSeconds(0.5f);
+        moveDir = -moveDir;
+        Debug.Log("Detect something");
+    }
     private void FixedUpdate()
     {
         if (knockback.GettingKnockedBack) { return; }
 
         rb.MovePosition(rb.position + moveDir * (moveSpeed * Time.fixedDeltaTime));
 
-        if (moveDir.x < 0)
+        if (reverse_Enemies == false)
         {
-            spriteRenderer.flipX = true;
+            if (moveDir.x < 0)
+            {
+                spriteRenderer.flipX = true;
+            }
+            else if (moveDir.x > 0)
+            {
+                spriteRenderer.flipX = false;
+            }
         }
-        else if (moveDir.x > 0)
+        else
         {
-            spriteRenderer.flipX = false;
+
+            if (moveDir.x > 0)
+            {
+                spriteRenderer.flipX = true;
+            }
+            else if (moveDir.x < 0)
+            {
+                spriteRenderer.flipX = false;
+            }
         }
+        
     }
 
     public void MoveTo(Vector2 targetPosition)
@@ -42,4 +69,5 @@ public class EnemyPathFinding : MonoBehaviour
     {
         moveDir = Vector3.zero;
     }
+
 }

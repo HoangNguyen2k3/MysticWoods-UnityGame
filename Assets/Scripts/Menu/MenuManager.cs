@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 //using UnityEditor.SearchService;
 using UnityEngine;
@@ -11,7 +13,8 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private List<GameObject> menuList;
     int menuIndex = 0;
     [SerializeField] private string nameSelecting = "Menu-Start";
-    
+    private string currentLevel = "Scene1";
+    [SerializeField] private TextMeshProUGUI textMenu;
     
     void SelectNextMenu() {
         menuIndex++;
@@ -40,6 +43,15 @@ public class MenuManager : MonoBehaviour
 
     private void Update()
     {
+        if (PlayerPrefs.HasKey("CurrentLevelNum"))
+        {
+            int num = PlayerPrefs.GetInt("CurrentLevelNum");
+            textMenu.text = $"Start Game\n (Level {num})";
+        }
+        else
+        {
+            textMenu.text = "Start Game\n (Level 1)";
+        }
 /*        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             SelectPreviousMenu();
@@ -67,10 +79,22 @@ public class MenuManager : MonoBehaviour
             }
         }*/
     }
+    private void CheckLevel()
+    {
+        if (PlayerPrefs.HasKey("CurrentLevel"))
+        {
+            currentLevel = PlayerPrefs.GetString("CurrentLevel");
+        }
+        else
+        {
+            PlayerPrefs.SetString("CurrentLevel", "Scene1");
+        }
+    }
     IEnumerator enterGame()
     {
         PlaySoundEnter();
-        if (ApplicationVariables.startTalk == false)
+        CheckLevel();
+        if (ApplicationVariables.startTalk == false&&currentLevel=="Scene1")
         {
             Debug.Log("hi");
             ApplicationVariables.loadingSceneGame = "StartTalk";
@@ -78,7 +102,7 @@ public class MenuManager : MonoBehaviour
         }
         else
         {
-            ApplicationVariables.loadingSceneGame = "Scene1";
+            ApplicationVariables.loadingSceneGame = currentLevel;
         }
 
         yield return new WaitForSeconds(0.5f);

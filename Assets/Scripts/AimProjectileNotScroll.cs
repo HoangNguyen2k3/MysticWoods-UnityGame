@@ -6,10 +6,12 @@ public class AimProjectileNotScroll : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 15f;
     [SerializeField] private GameObject particalOnHitPrefabVFX;
+    [SerializeField] private GameObject bloom;
+    [SerializeField] private Transform bloomPosition;
     [SerializeField] private bool isEnemyProjectile = false;
     [SerializeField] private float projectileRange = 10f;
     private Vector3 startPosition;
-
+    [SerializeField] private float directStart = 0f;
     public float speedChange = 3f;
 
     private void Start()
@@ -25,6 +27,17 @@ public class AimProjectileNotScroll : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if(bloom)
+        {
+            PlayerHealth playerObject = other.gameObject.GetComponent<PlayerHealth>();
+            if (playerObject)
+            {
+                playerObject.TakeDamage(1, transform);
+                Instantiate(bloom, bloomPosition.position, transform.rotation);
+                Destroy(gameObject);
+            }
+            return;
+        }
         EnemyHealth enemyHealth = other.gameObject.GetComponent<EnemyHealth>();
         Indestructible indestructible = other.gameObject.GetComponent<Indestructible>();
         PlayerHealth player = other.gameObject.GetComponent<PlayerHealth>();
@@ -59,7 +72,7 @@ public class AimProjectileNotScroll : MonoBehaviour
         Vector3 targetPosition = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position;
         Vector3 directionToPlayer = (targetPosition - currentPosition).normalized;
         float angle = Mathf.Atan2(directionToPlayer.y, directionToPlayer.x);
-        transform.rotation = Quaternion.Euler(0f, 0f, angle * Mathf.Rad2Deg-180f);
+        transform.rotation = Quaternion.Euler(0f, 0f, angle * Mathf.Rad2Deg-180f+directStart);
 
         
         transform.Translate(delta * moveSpeed * directionToPlayer, Space.World);

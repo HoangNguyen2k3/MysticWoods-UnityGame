@@ -222,7 +222,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2463086590235564425
 CanvasRenderer:
@@ -439,6 +439,9 @@ MonoBehaviour:
   enemyType: {fileID: 4172737534405568288}
   attackCooldown: 2
   stopMovingWhileAttacking: 1
+  IsFollowPlayer: 0
+  speedFollow: 5
+  attackFollow: 0
 --- !u!114 &3286669479351054494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -452,6 +455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
+  reverse_Enemies: 0
 --- !u!114 &3875207181502268608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -709,8 +713,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -0.040000916, y: 0}
-  m_SizeDelta: {x: -10.08, y: 0}
+  m_AnchoredPosition: {x: 0.0000076293945, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7568914532170919152
 GameObject:

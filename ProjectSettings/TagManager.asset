@@ -18,6 +18,7 @@ TagManager:
   - Ghost
   - ThreeBarrels
   - GhostKey
+  - SnowSlime
   layers:
   - Default
   - TransparentFX

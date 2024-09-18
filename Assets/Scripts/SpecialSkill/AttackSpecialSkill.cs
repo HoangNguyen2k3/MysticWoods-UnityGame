@@ -29,11 +29,18 @@ public class AttackSpecialSkill : MonoBehaviour
     {
         if (SpawnSkillE==null)
         {
-            SpawnSkillE = GameObject.Find("Player").transform;
+            if (GameObject.FindGameObjectWithTag("Player"))
+            {
+                SpawnSkillE = GameObject.FindGameObjectWithTag("Player").transform;
+            }
+            
         }
         if(SpawnSkillQ==null)
         {
-            SpawnSkillQ = GameObject.Find("Player").transform;
+            if (GameObject.FindGameObjectWithTag("Player"))
+            {
+                SpawnSkillQ= GameObject.FindGameObjectWithTag("Player").transform;
+            }
         }
     }
     private void OnEnable()

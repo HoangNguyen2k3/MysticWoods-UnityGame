@@ -199,3 +199,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   teleportPositon: {fileID: 8698990044844576241}
   bloom: {fileID: 2867152609847376804, guid: a3d6b4235e56cfa4aa8d97b102990f87, type: 3}
+  teleportSpeed: 55

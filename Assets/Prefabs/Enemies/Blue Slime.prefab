@@ -352,6 +352,9 @@ MonoBehaviour:
   enemyType: {fileID: -5829197211991754320}
   attackCooldown: 2
   stopMovingWhileAttacking: 0
+  IsFollowPlayer: 0
+  speedFollow: 5
+  attackFollow: 0
 --- !u!114 &7527674466926090287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,6 +368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
+  reverse_Enemies: 0
 --- !u!95 &756380029317107334
 Animator:
   serializedVersion: 5
@@ -466,7 +470,7 @@ MonoBehaviour:
   bulletMoveSpeed: 6
   burstCount: 1
   projectilesPerBurst: 3
-  angleSpread: 88
+  angleSpread: 23
   startingDistance: 0.1
   timeBetweenBursts: 1
   restTime: 2
@@ -606,8 +610,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10, y: 0}
+  m_AnchoredPosition: {x: 2.5, y: -0.0003604889}
+  m_SizeDelta: {x: 5, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7280195164646352843
 CanvasRenderer:
@@ -679,7 +683,7 @@ RectTransform:
   m_Father: {fileID: 639990966362172364}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
-  m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -0.040000916, y: 0}
-  m_SizeDelta: {x: -10.08, y: 0}
+  m_AnchorMax: {x: 0.98456, y: 0.75}
+  m_AnchoredPosition: {x: -0.0000076293945, y: -0.005771637}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

@@ -148,7 +148,6 @@ public class Playercontroller : Singleton<Playercontroller>
     private float startingMoveSpeed;
     private bool facingLeft = false;
     private bool isDashing = false;
-
     protected override void Awake()
     {
         base.Awake();
@@ -226,7 +225,7 @@ public class Playercontroller : Singleton<Playercontroller>
     {
         if (knockBack.GettingKnockedBack || PlayerHealth.Instance.isDead) { return; }
         rb.MovePosition(rb.position + movement * (moveSpeed * Time.fixedDeltaTime));
-
+        
     }
     private void AdjustPlayerFacingDirection()
     {

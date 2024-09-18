@@ -1738,7 +1738,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 880233d4f0a0a26448717ec748ed5add, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level_name: StartTalk
+  level_name: Scene1
+  text: {fileID: 1271880566}
+  numLevel: 1
 --- !u!1 &801695646
 GameObject:
   m_ObjectHideFlags: 0
@@ -3510,6 +3512,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level_name: Level2_1
+  text: {fileID: 387431665}
+  numLevel: 2
 --- !u!1 &1499825598
 GameObject:
   m_ObjectHideFlags: 0

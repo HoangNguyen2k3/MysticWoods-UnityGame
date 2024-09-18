@@ -5,17 +5,21 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
     [SerializeField] private float roamChangeDirFloat = 2f;
-    [SerializeField] private float attackRange = 0f;
+    [SerializeField] public float attackRange = 0f;
     [SerializeField] private MonoBehaviour enemyType;
     [SerializeField] private float attackCooldown = 2f;
     [SerializeField] private bool stopMovingWhileAttacking = false;
-
-    private bool canAttack = true;
+    [SerializeField] private bool IsFollowPlayer = false;
+    [SerializeField] private float speedFollow = 5f;
+    [SerializeField] public float attackFollow = 0f;
+    public bool canAttack = true;
+    public bool isDead = false;
 
     private enum State
     {
         Roaming,
-        Attacking
+        Attacking,
+        FollowPlayer
     }
 
     private Vector2 roamPosition;
@@ -52,19 +56,27 @@ public class EnemyAI : MonoBehaviour
             case State.Attacking:
                 Attacking();
                 break;
+            case State.FollowPlayer:
+                FollowingPlayer();
+                break;
         }
     }
 
     private void Roaming()
     {
         timeRoaming += Time.deltaTime;
-
+        enemyPathfinding.moveSpeed = 2f;
         enemyPathfinding.MoveTo(roamPosition);
         if (Playercontroller.Instance)
         {
             if (Vector2.Distance(transform.position, Playercontroller.Instance.transform.position) < attackRange)
             {
                 state = State.Attacking;
+            }else if(Vector2.Distance(transform.position, Playercontroller.Instance.transform.position) >= attackRange&&
+                Vector2.Distance(transform.position, Playercontroller.Instance.transform.position) < attackFollow&&
+                IsFollowPlayer)
+            {
+                state = State.FollowPlayer;
             }
         }
         if (timeRoaming > roamChangeDirFloat)
@@ -72,16 +84,40 @@ public class EnemyAI : MonoBehaviour
             roamPosition = GetRoamingPosition();
         }
     }
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        roamPosition *= (-1);
+    }
+    private void FollowingPlayer()
+    {
+        enemyPathfinding.StopMoving();
+        if (Vector2.Distance(transform.position, Playercontroller.Instance.transform.position) > attackFollow)
+        {
+            state = State.Roaming;
+        }else if(Vector2.Distance(transform.position, Playercontroller.Instance.transform.position) < attackRange
+            )
+        {
+            state = State.Attacking;
+        }
+        Vector2 direction = (Playercontroller.Instance.transform.position - transform.position).normalized;
+        enemyPathfinding.moveSpeed = speedFollow;
+        enemyPathfinding.MoveTo(direction);
+    }
     private void Attacking()
     {
-        
+        if (isDead) return;
         if (Playercontroller.Instance)
         {
-            if (Vector2.Distance(transform.position, Playercontroller.Instance.transform.position) > attackRange)
+            if (Vector2.Distance(transform.position, Playercontroller.Instance.transform.position) > attackFollow)
         {
             state = State.Roaming;
         }
+            else if (Vector2.Distance(transform.position, Playercontroller.Instance.transform.position) >= attackRange &&
+                Vector2.Distance(transform.position, Playercontroller.Instance.transform.position) <= attackFollow &&
+                IsFollowPlayer)
+            {
+                state = State.FollowPlayer;
+            }
         }
         
 
@@ -93,8 +129,8 @@ public class EnemyAI : MonoBehaviour
             {
                 (enemyType as IEnemy).Attack();
             }
-           
 
+            enemyPathfinding.moveSpeed = 2f;
             if (stopMovingWhileAttacking)
             {
                 enemyPathfinding.StopMoving();

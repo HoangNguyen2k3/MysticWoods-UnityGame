@@ -1,0 +1,696 @@
+fileFormatVersion: 2
+guid: 8a662989e9b3ac247a6bc992604d0938
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Ice VFX 1_Frame_4
+    originalName: 
+    pivot: {x: 0.6764706, y: -7.5}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 43
+      y: 75
+      width: 34
+      height: 12
+    spriteID: e849192516651ae42879c410fc69e579
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 43, y: 75}
+  - name: Ice VFX 1_Frame_5
+    originalName: 
+    pivot: {x: 0.60526305, y: -6}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 43
+      y: 29
+      width: 38
+      height: 15
+    spriteID: fcef6437c4fb27f42b18950f5b22fcb3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 43, y: 29}
+  - name: Ice VFX 1_Frame_6
+    originalName: 
+    pivot: {x: 0.61538464, y: -5.1764708}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 43
+      y: 4
+      width: 39
+      height: 17
+    spriteID: 346b680feb199f247a97188a1d77330d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 43, y: 4}
+  - name: Ice VFX 1_Frame_7
+    originalName: 
+    pivot: {x: 0.60526305, y: -5.733333}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 43
+      y: 52
+      width: 38
+      height: 15
+    spriteID: f3ab17871f5596145969558b7db6ce51
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 43, y: 52}
+  - name: Ice VFX 1_Frame_8
+    originalName: 
+    pivot: {x: 0.6333334, y: -7.4166665}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 212
+      width: 30
+      height: 12
+    spriteID: 8060e00815f85654a89e4485f9c6eb5c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 212}
+  - name: Ice VFX 1_Frame_9
+    originalName: 
+    pivot: {x: 0.6764706, y: -5.9333334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 89
+      y: 29
+      width: 34
+      height: 15
+    spriteID: c518e552b8884c144ab77526814f80ff
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 89, y: 29}
+  - name: Ice VFX 1_Frame_10
+    originalName: 
+    pivot: {x: 0.6764706, y: -6.4285717}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 90
+      y: 4
+      width: 34
+      height: 14
+    spriteID: 9dd9508f83acddd49b378e13ea0b0e8c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 90, y: 4}
+  - name: Ice VFX 1_Frame_11
+    originalName: 
+    pivot: {x: 0.6857143, y: -8.181818}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 43
+      y: 95
+      width: 35
+      height: 11
+    spriteID: 42224c0557d796d4da2ee0555b41a2b8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 43, y: 95}
+  - name: Ice VFX 1_Frame_14
+    originalName: 
+    pivot: {x: 0.3043479, y: -3.36}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 148
+      width: 23
+      height: 25
+    spriteID: 57b9a40e1f1b42048a1c7dc05a1c21b8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 148}
+  - name: Ice VFX 1_Frame_15
+    originalName: 
+    pivot: {x: 0.25000006, y: -2.892857}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 80
+      width: 28
+      height: 28
+    spriteID: 16a1e693bca26d9499adcde6058f2843
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 80}
+  - name: Ice VFX 1_Frame_16
+    originalName: 
+    pivot: {x: 0.26666662, y: -2.6666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 42
+      width: 30
+      height: 30
+    spriteID: 160e727fc62db5c46a8cf1ad803afb33
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 42}
+  - name: Ice VFX 1_Frame_17
+    originalName: 
+    pivot: {x: 0.25806445, y: -2.6666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 31
+      height: 30
+    spriteID: 9e609e2fdad0e364e97bb465478cfa22
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Ice VFX 1_Frame_18
+    originalName: 
+    pivot: {x: 0.041666746, y: -3.7826087}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 181
+      width: 24
+      height: 23
+    spriteID: 932cfcf0ce3d6b643a3470ed71c072eb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 181}
+  - name: Ice VFX 1_Frame_19
+    originalName: 
+    pivot: {x: -1.3333334, y: -9.666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 70
+      y: 133
+      width: 9
+      height: 9
+    spriteID: 5d138918953e6cc49a5a44622a23f636
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 70, y: 133}
+  - name: Ice VFX 1_Frame_3
+    originalName: 
+    pivot: {x: 0.6333334, y: -7.4166665}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 232
+      width: 30
+      height: 12
+    spriteID: 4d46d16f2d2434f4da68b41bbd20a372
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 232}
+  - name: Ice VFX 1_Frame_12
+    originalName: 
+    pivot: {x: 0.6764706, y: -8.181818}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 43
+      y: 114
+      width: 34
+      height: 11
+    spriteID: 56877a414bb069646838c319e64a8d4a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 43, y: 114}
+  - name: Ice VFX 1_Frame_0
+    originalName: 
+    pivot: {x: 1.0769229, y: -13.142857}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 43
+      y: 167
+      width: 13
+      height: 7
+    spriteID: f7a8c898e86446541bf169d2c10563ea
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 43, y: 167}
+  - name: Ice VFX 1_Frame_1
+    originalName: 
+    pivot: {x: 0.7777777, y: -10.111112}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 43
+      y: 150
+      width: 18
+      height: 9
+    spriteID: bf2cbb4e9206d294a84c7d4f58dd37ce
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 43, y: 150}
+  - name: Ice VFX 1_Frame_2
+    originalName: 
+    pivot: {x: 0.736842, y: -10.111112}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 43
+      y: 133
+      width: 19
+      height: 9
+    spriteID: 210fb7ec13a1b2948aa050c86d658327
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 43, y: 133}
+  - name: Ice VFX 1_Frame_13
+    originalName: 
+    pivot: {x: 0.48148155, y: -3.5416667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 116
+      width: 27
+      height: 24
+    spriteID: ff5a26165adbf3e4385bf85fe4753943
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 116}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 270395102
+    name: Ice VFX 1
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Ice VFX 1_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 73
+        y: 90
+        width: 34
+        height: 12
+      spriteId: e849192516651ae42879c410fc69e579
+    - name: Ice VFX 1_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 73
+        y: 90
+        width: 38
+        height: 15
+      spriteId: fcef6437c4fb27f42b18950f5b22fcb3
+    - name: Ice VFX 1_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 72
+        y: 88
+        width: 39
+        height: 17
+      spriteId: 346b680feb199f247a97188a1d77330d
+    - name: Ice VFX 1_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 73
+        y: 86
+        width: 38
+        height: 15
+      spriteId: f3ab17871f5596145969558b7db6ce51
+    - name: Ice VFX 1_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 77
+        y: 89
+        width: 30
+        height: 12
+      spriteId: 8060e00815f85654a89e4485f9c6eb5c
+    - name: Ice VFX 1_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 73
+        y: 89
+        width: 34
+        height: 15
+      spriteId: c518e552b8884c144ab77526814f80ff
+    - name: Ice VFX 1_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 73
+        y: 90
+        width: 34
+        height: 14
+      spriteId: 9dd9508f83acddd49b378e13ea0b0e8c
+    - name: Ice VFX 1_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 72
+        y: 90
+        width: 35
+        height: 11
+      spriteId: 42224c0557d796d4da2ee0555b41a2b8
+    - name: Ice VFX 1_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 89
+        y: 84
+        width: 23
+        height: 25
+      spriteId: 57b9a40e1f1b42048a1c7dc05a1c21b8
+    - name: Ice VFX 1_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 89
+        y: 81
+        width: 28
+        height: 28
+      spriteId: 16a1e693bca26d9499adcde6058f2843
+    - name: Ice VFX 1_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 88
+        y: 80
+        width: 30
+        height: 30
+      spriteId: 160e727fc62db5c46a8cf1ad803afb33
+    - name: Ice VFX 1_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 88
+        y: 80
+        width: 31
+        height: 30
+      spriteId: 9e609e2fdad0e364e97bb465478cfa22
+    - name: Ice VFX 1_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 95
+        y: 87
+        width: 24
+        height: 23
+      spriteId: 932cfcf0ce3d6b643a3470ed71c072eb
+    - name: Ice VFX 1_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 108
+        y: 87
+        width: 9
+        height: 9
+      spriteId: 5d138918953e6cc49a5a44622a23f636
+    - name: Ice VFX 1_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 77
+        y: 89
+        width: 30
+        height: 12
+      spriteId: 4d46d16f2d2434f4da68b41bbd20a372
+    - name: Ice VFX 1_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 73
+        y: 90
+        width: 34
+        height: 11
+      spriteId: 56877a414bb069646838c319e64a8d4a
+    - name: Ice VFX 1_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 82
+        y: 92
+        width: 13
+        height: 7
+      spriteId: f7a8c898e86446541bf169d2c10563ea
+    - name: Ice VFX 1_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 82
+        y: 91
+        width: 18
+        height: 9
+      spriteId: bf2cbb4e9206d294a84c7d4f58dd37ce
+    - name: Ice VFX 1_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 82
+        y: 91
+        width: 19
+        height: 9
+      spriteId: 210fb7ec13a1b2948aa050c86d658327
+    - name: Ice VFX 1_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 83
+        y: 85
+        width: 27
+        height: 24
+      spriteId: ff5a26165adbf3e4385bf85fe4753943
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 192, y: 192}
