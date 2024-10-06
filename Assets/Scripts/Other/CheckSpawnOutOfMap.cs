@@ -7,10 +7,10 @@ public class CheckSpawnOutOfMap : MonoBehaviour
     [SerializeField] private bool isDestroyGameObject = true;
     [SerializeField] private GameObject gameObjectSpawn;
 
-    private  float mapMinX = -13.82f;
-    private  float mapMaxX = 16.61f;
-    private  float mapMinY = -9.63f;
-    private  float mapMaxY = 8.76f;
+    private  float mapMinX = -14f;
+    private  float mapMaxX = 17f;
+    private  float mapMinY = -10f;
+    private float mapMaxY = 9f;
 
     private void Update()
     {

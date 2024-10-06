@@ -192,7 +192,14 @@ public class Playercontroller : Singleton<Playercontroller>
         spriteRenderer.sprite = characterSprites[characterIndex];
         myAnimator.runtimeAnimatorController = characterAnimators[characterIndex];
     }
-
+    public void EnableControl()
+    {
+        playerControls.Enable();
+    }
+    public void DisableControl()
+    {
+        playerControls.Disable();
+    }
     private void OnEnable()
     {
         playerControls.Enable();

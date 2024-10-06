@@ -1,17 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class EnemyAI : MonoBehaviour
 {
+    //A* algorithms
+    [Header("Pathfinding")]
+    [SerializeField] private bool IsFollowPlayer = false;
+    [SerializeField] private Seeker seeker;
+    [SerializeField] private GameObject target;
+    private Path path;
+    private Coroutine moveCoroutine;
+    [SerializeField] private float nextWPDistance=0.3f;
+    [SerializeField] private float speedFollow = 5f;
+    [SerializeField] public float attackFollow = 0f;
+    //
+    [Header("EnemyAI Normal")]
     [SerializeField] private float roamChangeDirFloat = 2f;
     [SerializeField] public float attackRange = 0f;
     [SerializeField] private MonoBehaviour enemyType;
     [SerializeField] private float attackCooldown = 2f;
     [SerializeField] private bool stopMovingWhileAttacking = false;
-    [SerializeField] private bool IsFollowPlayer = false;
-    [SerializeField] private float speedFollow = 5f;
-    [SerializeField] public float attackFollow = 0f;
+
     public bool canAttack = true;
     public bool isDead = false;
 
@@ -32,15 +43,18 @@ public class EnemyAI : MonoBehaviour
     {
         enemyPathfinding = GetComponent<EnemyPathFinding>();
         state = State.Roaming;
+        
     }
 
     private void Start()
     {
+        target = FindObjectOfType<Playercontroller>().gameObject;
         roamPosition = GetRoamingPosition();
     }
 
     private void Update()
     {
+        
         MovementStateControl();
     }
 
@@ -86,7 +100,11 @@ public class EnemyAI : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        roamPosition *= (-1);
+        if (Vector2.Distance(transform.position, Playercontroller.Instance.transform.position) > attackFollow)
+        {
+            roamPosition *= (-1);
+        }
+
     }
     private void FollowingPlayer()
     {
@@ -99,9 +117,10 @@ public class EnemyAI : MonoBehaviour
         {
             state = State.Attacking;
         }
-        Vector2 direction = (Playercontroller.Instance.transform.position - transform.position).normalized;
+        /*Vector2 direction = (Playercontroller.Instance.transform.position - transform.position).normalized;
         enemyPathfinding.moveSpeed = speedFollow;
-        enemyPathfinding.MoveTo(direction);
+        enemyPathfinding.MoveTo(direction);*/
+        CalculatePath();
     }
     private void Attacking()
     {
@@ -154,5 +173,57 @@ public class EnemyAI : MonoBehaviour
     {
         timeRoaming = 0f;
         return new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
+    }
+    //A*
+    private void CalculatePath()     
+    {
+       // if (seeker.IsDone())
+       // {
+            seeker.StartPath(transform.position,target.transform.position,OnPathCallBack);
+       // }
+    }
+    private void OnPathCallBack(Path p)
+    {
+        if (p.error)
+        {
+            return;
+        }
+        path = p;
+        MoveToTarget();
+        //Move To Target
+    }
+    private void MoveToTarget()
+    {
+/*        if(moveCoroutine != null)
+        {
+            StopCoroutine(moveCoroutine);
+        }*/
+        moveCoroutine = StartCoroutine(MoveToTargetCoroutine());
+    }
+   private IEnumerator MoveToTargetCoroutine()
+    {
+        int currentWP = 0;
+        while (currentWP < path.vectorPath.Count)
+        {
+            Vector2 direction = ((Vector2)path.vectorPath[currentWP]-(Vector2)transform.position).normalized;
+            enemyPathfinding.moveSpeed = speedFollow;
+            enemyPathfinding.MoveTo(direction);
+            if (Vector2.Distance(transform.position, Playercontroller.Instance.transform.position) > attackFollow)
+            {
+                state = State.Roaming;
+                break;
+            }
+            else if (Vector2.Distance(transform.position, Playercontroller.Instance.transform.position) < attackRange)
+            {
+                state = State.Attacking;
+                break;
+            }
+            float distance = Vector2.Distance(transform.position, path.vectorPath[currentWP]);
+            if (distance < nextWPDistance)
+            {
+                currentWP++;
+            }
+            yield return null;
+        }
     }
 }

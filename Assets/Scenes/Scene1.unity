@@ -28027,6 +28027,10 @@ PrefabInstance:
       propertyPath: SpawnSkillQ
       value: 
       objectReference: {fileID: 1230060970}
+    - target: {fileID: 3113881062977937977, guid: d39c9f28dbaaa9f4d81d649474dea644, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6377684296849060014, guid: d39c9f28dbaaa9f4d81d649474dea644, type: 3}
       propertyPath: SpawnSkillE
       value: 
